@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Skinique Dermatology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/css/button.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        heading: ["Syne", "sans-serif"],
+                    },
+                    colors: {
+                        primary: "#C9B27C",
+                        primaryHover: "#b59e66",
+                        bgMain: "#FDF7EF",
+                        bgSection: "#F7ECDF",
+                        textDark: "#1A1A1A",
+                        textMuted: "#666666",
+                        skiniqueBorder: "#E8DCC8",
+                        skiniqueLight: "#8C8273",
+                    },
+                    borderRadius: {
+                        custom: "4px",
+                        card: "8px",
+                    },
+                    boxShadow: {
+                        soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                        float: "0 10px 30px -5px rgba(201, 178, 124, 0.15)",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #FDF7EF; color: #1A1A1A; margin: 0; padding: 0; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDF7EF; }
+        ::-webkit-scrollbar-thumb { background: #C9B27C; border-radius: 4px; }
+
+        .glass-panel {
+            background: rgba(253, 247, 239, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 178, 124, 0.2);
+        }
+
+        /* TOC */
+        .toc-link { position: relative; transition: all 0.3s ease; }
+        .toc-link.active { color: #C9B27C; font-weight: 500; }
+        .toc-container { position: relative; }
+        .toc-highlight-border {
+            position: absolute;
+            left: -2px;
+            width: 2px;
+            background-color: #C9B27C;
+            transition: top 0.3s ease, height 0.3s ease;
+            z-index: 10;
+        }
+
+        /* Accordion */
+        .accordion-content {
+            transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0; opacity: 0; overflow: hidden; padding-top: 0; padding-bottom: 0;
+        }
+        .accordion-item.active .accordion-content { max-height: 500px; opacity: 1; padding-top: 1rem; padding-bottom: 1rem; }
+        .accordion-icon { transition: transform 0.3s ease; }
+        .accordion-item.active .accordion-icon { transform: rotate(180deg); }
+
+        /* Clause hover */
+        .clause-block { transition: background-color 0.3s ease, border-color 0.3s ease; border-left: 2px solid transparent; }
+        /* .clause-block:hover { background-color: rgba(247, 236, 223, 0.3); border-left-color: #C9B27C; } */
+    </style>
+</head>
+<body class="font-sans antialiased text-textDark bg-bgMain m-0 p-0">
+
+       <!-- Top Promotional Banner -->
+    <div
+      id="promo-banner"
+      class="fixed top-0 left-0 w-full z-[100] h-12 bg-textDark flex items-center justify-center px-4 shadow-md transition-transform duration-300"
+    >
+      <div class="flex items-center justify-center w-full max-w-7xl mx-auto">
+        <div class="flex items-center justify-center gap-4 flex-1">
+          <span
+            class="text-xs md:text-xs font-medium tracking-widest uppercase text-[#C9B27C] text-center"
+            >20% Off on Laser Treatment – Limited Time</span
+          >
+          
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Mobile Sticky FAB -->
+    <div class="md:hidden fixed bottom-6 right-6 z-[70]">
+      <a
+        href="#booking"
+        aria-label="Book Consultation"
+        class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(201,178,124,0.4)] interactive-btn focus-ring"
+      >
+        <i class="fa-regular fa-calendar-check text-xl"></i>
+      </a>
+    </div>
+
+    <!-- Header Navigation -->
+    <header
+      id="header"
+      class="fixed w-full top-12 z-50 bg-bgMain/95 backdrop-blur-md border-b border-primary/20 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex flex-1 items-center gap-2">
+          <span
+            class="font-heading font-bold text-2xl tracking-tight text-textDark"
+            >Skinique</span
+          >
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            href="./index.html"
+            class="text-md font-medium text-textMuted  interactive-link focus-ring"
+            >Home</a
+          >
+          <a
+            href="./about-us.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >About</a
+          >
+          <a
+            href="./service.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >Services</a
+          >
+          <a
+            href="./gallery.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >Gallery</a
+          >
+          <a
+            href="./before-after.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >Before & After</a
+          >
+          <a
+            href="./blogs.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >Blog</a
+          >
+          <a
+            href="./contact.html"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="flex flex-1  justify-end gap-4">
+          <button class="primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Book Consultation</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            aria-label="Toggle Mobile Menu"
+            class="md:hidden text-textDark p-2 focus-ring interactive-btn"
+            onclick="
+              document
+                .getElementById('mobile-menu')
+                .classList.toggle('translate-x-full')
+            "
+          >
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+   <div
+  id="mobile-menu"
+  class="fixed inset-y-0  right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
+>
+  <div class="flex items-center justify-between p-6 border-b border-primary/10">
+    <span class="font-heading font-bold text-2xl tracking-tight text-textDark">
+      Skinique
+    </span>
+    <button
+      aria-label="Close Mobile Menu"
+      class="text-textDark p-2 focus-ring interactive-btn hover:text-primary transition-colors"
+      onclick="
+        document
+          .getElementById('mobile-menu')
+          .classList.add('translate-x-full')
+      "
+    >
+      <i class="fa-solid fa-xmark text-2xl"></i>
+    </button>
+  </div>
+
+  <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+
+    <!-- Active -->
+    <a
+      href="./index.html"
+      class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 interactive-link focus-ring"
+    >
+      Home
+    </a>
+
+    <a
+      href="./about-us.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      About
+    </a>
+
+    <a
+      href="./service.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      Services
+    </a>
+
+    <a
+      href="./gallery.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      Gallery
+    </a>
+
+    <a
+      href="./before-after.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      Before & After
+    </a>
+
+    <a
+      href="./blogs.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      Blog
+    </a>
+
+    <a
+      href="./contact.html"
+      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+    >
+      Contact
+    </a>
+
+    <!-- CTA -->
+    <div class="mt-8 pt-8 border-t border-primary/10">
+       <button class="primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Book Consultation</span>
+          </button>
+    </div>
+
+  </nav>
+</div>
+
+
+    <main class="flex-grow pt-[128px] w-full">
+
+        <!-- HERO -->
+        <section class="w-full border-b border-skiniqueBorder bg-bgMain">
+            <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-24 max-w-3xl">
+                <span class="font-sans text-xs uppercase tracking-widest text-textMuted mb-6 block">Legal Documentation</span>
+                <h1 class="font-heading text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-textDark mb-6">
+                    Privacy Policy
+                </h1>
+                <p class="font-sans text-lg text-textMuted max-w-2xl leading-relaxed mb-8">
+                    At Skinique Dermatology, we are committed to protecting your personal and medical information. This policy outlines how we collect, use, and safeguard your data.
+                </p>
+                <!-- Meta strip -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-textMuted">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-regular fa-calendar text-primary"></i>
+                        <span><strong class="text-textDark">Effective Date:</strong> March 15, 2026</span>
+                    </div>
+                   
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SPLIT LAYOUT -->
+        <section class="w-full bg-bgMain flex flex-col lg:flex-row relative max-w-[1440px] mx-auto">
+
+            <!-- Sidebar TOC -->
+            <aside class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r border-skiniqueBorder bg-bgMain lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] overflow-y-auto">
+                <div class="p-8 lg:p-12">
+                    <h3 class="font-sans text-xs uppercase tracking-widest text-textMuted font-semibold mb-6">Sections</h3>
+                    <nav id="toc-nav" class="flex flex-col relative toc-container text-sm border-l-2 border-skiniqueBorder/50">
+                        <div class="toc-highlight-border rounded-full" id="toc-highlight"></div>
+                        <a href="#section-1" class="toc-link active py-2.5 pl-4 text-primary font-medium bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-1">1. Information We Collect</a>
+                        <a href="#section-2" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-2">2. How We Use Your Info</a>
+                        <a href="#section-3" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-3">3. Medical Records & HIPAA</a>
+                        <a href="#section-4" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-4">4. Information Sharing</a>
+                        <a href="#section-5" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-5">5. Data Security</a>
+                        <a href="#section-6" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-6">6. Your Rights</a>
+                        <a href="#section-7" class="toc-link py-2.5 pl-4 text-textMuted hover:text-textDark hover:bg-primary/5 rounded-r-custom transition-colors relative z-10" data-target="section-7">7. Contact Information</a>
+                    </nav>
+
+                    <!-- Quick Summary Accordions -->
+                    <div class="mt-10">
+                        <h3 class="font-sans text-xs uppercase tracking-widest text-textMuted font-semibold mb-4">Quick Summary</h3>
+                        <div class="space-y-3">
+
+                            <div class="accordion-item bg-white border border-skiniqueBorder rounded-custom shadow-soft overflow-hidden">
+                                <button class="w-full px-4 py-3 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                                    <span class="font-sans text-xs font-semibold text-textDark">Data We Collect</span>
+                                    <i class="fa-solid fa-chevron-down text-textMuted accordion-icon text-xs"></i>
+                                </button>
+                                <div class="accordion-content px-4 bg-bgMain/30">
+                                    <p class="text-xs text-textMuted leading-relaxed">We collect your name, contact details, medical history, treatment records, billing info, and basic technical data from website usage.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-white border border-skiniqueBorder rounded-custom shadow-soft overflow-hidden">
+                                <button class="w-full px-4 py-3 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                                    <span class="font-sans text-xs font-semibold text-textDark">HIPAA Compliance</span>
+                                    <i class="fa-solid fa-chevron-down text-textMuted accordion-icon text-xs"></i>
+                                </button>
+                                <div class="accordion-content px-4 bg-bgMain/30">
+                                    <p class="text-xs text-textMuted leading-relaxed">All Protected Health Information (PHI) is stored in encrypted EHR systems. Access is restricted to authorized clinical staff only.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-white border border-skiniqueBorder rounded-custom shadow-soft overflow-hidden">
+                                <button class="w-full px-4 py-3 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                                    <span class="font-sans text-xs font-semibold text-textDark">Data Sharing</span>
+                                    <i class="fa-solid fa-chevron-down text-textMuted accordion-icon text-xs"></i>
+                                </button>
+                                <div class="accordion-content px-4 bg-bgMain/30">
+                                    <p class="text-xs text-textMuted leading-relaxed">We never sell or trade your data. Sharing is limited to care providers, billing, and legal requirements.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item bg-white border border-skiniqueBorder rounded-custom shadow-soft overflow-hidden">
+                                <button class="w-full px-4 py-3 flex items-center justify-between text-left focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                                    <span class="font-sans text-xs font-semibold text-textDark">Your Rights</span>
+                                    <i class="fa-solid fa-chevron-down text-textMuted accordion-icon text-xs"></i>
+                                </button>
+                                <div class="accordion-content px-4 bg-bgMain/30">
+                                    <p class="text-xs text-textMuted leading-relaxed">You can access, correct, or restrict use of your records. Opt out of non-essential communications at any time.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <article class="w-full lg:w-3/4 p-8 lg:p-16 lg:pl-24 font-sans text-textDark leading-relaxed">
+
+                <!-- HIPAA Notice Banner -->
+                <div class="bg-bgSection border border-primary p-6 rounded-custom shadow-soft mb-16 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 border border-primary/20">
+                        <i class="fa-solid fa-shield-halved text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-base font-semibold text-textDark mb-1">HIPAA Notice of Privacy Practices</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">
+                            This notice describes how medical information about you may be used and disclosed and how you can get access to this information. Please review it carefully.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section 1 -->
+                <div id="section-1" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-heading text-3xl font-bold text-textDark">1. Information We Collect</h2>
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-custom text-xs font-medium bg-bgSection border border-primary/20 text-textDark">
+                            <i class="fa-solid fa-database mr-1.5 text-primary"></i> Data Collection
+                        </span>
+                    </div>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">We collect information that you provide directly to us, as well as data automatically collected when you interact with our clinical services and website.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">1.1 Personal Identification</h4>
+                            <p class="text-sm text-textMuted">Name, date of birth, and contact details collected during registration, booking, or consultation intake.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">1.2 Medical Information</h4>
+                            <p class="text-sm text-textMuted">Health history, treatment records, and clinical photographs taken for tracking your dermatological progress.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">1.3 Payment & Technical Data</h4>
+                            <p class="text-sm text-textMuted">Billing address, insurance details, transaction history, IP addresses, browser types, and website usage metrics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div id="section-2" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section  border-l-0 rounded-[4px]">
+                    <h2 class="font-heading text-3xl font-bold text-textDark mb-4">2. How We Use Your Information</h2>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">The information we collect is utilized strictly to provide premium dermatological care and improve patient experiences.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">2.1 Clinical Care</h4>
+                            <p class="text-sm text-textMuted">Scheduling and managing consultations, communicating treatment plans, post-care protocols, and appointment reminders.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">2.2 Administrative Use</h4>
+                            <p class="text-sm text-textMuted">Processing payments, coordinating with insurance providers, and enhancing internal quality assurance protocols.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div id="section-3" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-heading text-3xl font-bold text-textDark">3. Medical Records & HIPAA</h2>
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-custom text-xs font-medium bg-white border border-skiniqueBorder text-textMuted">
+                            <i class="fa-solid fa-lock mr-1.5 text-primary"></i> HIPAA Protected
+                        </span>
+                    </div>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">Skinique Dermatology adheres strictly to the Health Insurance Portability and Accountability Act (HIPAA) regulations regarding Protected Health Information (PHI).</p>
+                    <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                        <h4 class="font-heading text-base font-semibold text-textDark mb-2">3.1 EHR Storage</h4>
+                        <p class="text-sm text-textMuted">Your clinical data, including photographs taken for treatment tracking, are stored in secure, encrypted electronic health record (EHR) systems. Access is restricted solely to authorized clinical staff directly involved in your care.</p>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div id="section-4" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section  border-l-0 rounded-[4px]">
+                    <h2 class="font-heading text-3xl font-bold text-textDark mb-4">4. Information Sharing</h2>
+                    <p class="uppercase text-xs tracking-widest font-semibold text-textDark mb-4">We do not sell your data</p>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">We do not sell, rent, or trade your personal or medical information to third parties under any circumstances.</p>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">Trusted third-party providers (pharmacies, labs) essential to your care.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">Billing and insurance processing purposes only.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">When required by law or valid legal requests.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 5 -->
+                <div id="section-5" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section">
+                    <h2 class="font-heading text-3xl font-bold text-textDark mb-4">5. Data Security</h2>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">We implement robust administrative, technical, and physical safeguards designed to protect your information from unauthorized access, disclosure, or alteration.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">5.1 Digital Infrastructure</h4>
+                            <p class="text-sm text-textMuted">Our systems utilize industry-standard encryption protocols, ensuring all data in transit and at rest is fully protected.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-custom border border-skiniqueBorder shadow-soft">
+                            <h4 class="font-heading text-base font-semibold text-textDark mb-2">5.2 Physical Facilities</h4>
+                            <p class="text-sm text-textMuted">Strict access controls are enforced at all physical locations to ensure the integrity of your medical records.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6 -->
+                <div id="section-6" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section  border-l-0 rounded-[4px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-heading text-3xl font-bold text-textDark">6. Your Rights</h2>
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-custom text-xs font-medium bg-white border border-skiniqueBorder text-textMuted">
+                            <i class="fa-solid fa-user-shield mr-1.5 text-primary"></i> Patient Rights
+                        </span>
+                    </div>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">As a patient, you have specific rights regarding your personal and medical data under HIPAA and applicable privacy law.</p>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">The right to access and request copies of your medical records.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">The right to request corrections to any inaccurate information.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">The right to opt-out of non-essential clinical communications (e.g., newsletters).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-primary mt-1"></i>
+                            <span class="text-textMuted">The right to request restrictions on how we use or disclose your PHI.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 7 -->
+                <div id="section-7" class="scroll-mt-28 mb-16 clause-block p-4 -ml-4 rounded-r-custom policy-section">
+                    <h2 class="font-heading text-3xl font-bold text-textDark mb-4">7. Contact Information</h2>
+                    <p class="text-textMuted text-lg leading-relaxed mb-6">If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your data, please contact our Privacy Officer directly.</p>
+                    <div class="bg-white p-6 rounded-custom border border-skiniqueBorder shadow-soft">
+                        <h4 class="font-heading text-base font-semibold text-textDark mb-3">Skinique Privacy Office</h4>
+                        <ul class="space-y-2 text-sm text-textMuted mb-5">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-primary w-4"></i>
+                                <span>123 Luxury Avenue, Sector 17, Vashi, Navi Mumbai 400703</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-primary w-4"></i>
+                                <span>privacy@skinique.com</span>
+                            </li>
+                        </ul>
+                        <button class="bg-textDark text-white px-6 py-2.5 rounded-custom font-medium hover:bg-black transition-colors shadow-soft text-sm">Contact Privacy Officer</button>
+                    </div>
+                </div>
+
+                <!-- Acknowledgment Block -->
+                <div class="bg-bgMain border border-skiniqueBorder p-6 rounded-custom shadow-soft">
+                    <h3 class="font-heading text-xl font-semibold text-textDark mb-4">Acknowledgment</h3>
+                    <p class="text-sm text-textMuted mb-6 leading-relaxed">
+                        By continuing to use our website or booking a consultation, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy in its entirety.
+                    </p>
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                        <div class="relative flex items-center justify-center w-5 h-5 mt-0.5 border border-primary/50 rounded bg-bgMain group-hover:border-primary transition-colors">
+                            <input type="checkbox" class="peer sr-only" checked>
+                            <i class="fa-solid fa-check text-xs text-primary opacity-0 peer-checked:opacity-100 transition-opacity"></i>
+                        </div>
+                        <span class="text-sm font-medium text-textDark">I have read and agree to the Privacy Policy</span>
+                    </label>
+                </div>
+
+            </article>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 w-full max-w-6xl mx-auto px-6 border-t border-skiniqueBorder/50">
+            <div class="bg-textDark text-white rounded-[32px] overflow-hidden relative">
+                <div class="absolute inset-0 opacity-20">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3382df8161-88e7a12e2fe2adcaa710.png" alt="Abstract luxury background" />
+                </div>
+                <div class="relative z-10 px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-3xl mx-auto">
+                    <span class="text-primary text-xs font-semibold tracking-widest uppercase mb-6 block">Ready to start?</span>
+                    <h2 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8">Begin Your Transformation</h2>
+                    <p class="text-white/80 text-lg md:text-xl leading-relaxed font-light mb-12">
+                        Schedule a comprehensive consultation to discuss the right protocol for your unique skin goals.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-textDark px-10 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-soft text-sm tracking-widest uppercase">Book Consultation</button>
+                        <button class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors text-sm tracking-widest uppercase">View Pricing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   <!-- Footer Navigation -->
+    <footer id="footer" class="bg-bgMain py-10 border-t border-primary/20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+          <div class="md:col-span-4">
+            <h3
+              class="font-heading text-3xl font-bold mb-6 text-textDark tracking-tight uppercase"
+            >
+              Skinique.
+            </h3>
+            <p class="text-textMuted text-sm leading-relaxed mb-8 max-w-xs">
+              Premium dermatology and aesthetic clinic dedicated to revealing
+              your natural beauty through science-backed treatments.
+            </p>
+           <div class="flex gap-4">
+  <a
+    href="#"
+    aria-label="Instagram"
+    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+  >
+    <i class="fa-brands fa-instagram text-lg"></i>
+  </a>
+
+  <a
+    href="#"
+    aria-label="Facebook"
+    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+  >
+    <i class="fa-brands fa-facebook-f text-lg"></i>
+  </a>
+
+  <a
+    href="#"
+    aria-label="Twitter"
+    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+  >
+    <i class="fa-brands fa-twitter text-lg"></i>
+  </a>
+</div>
+          </div>
+
+          <div class="md:col-span-2">
+            <h4
+              class="text-xs font-medium tracking-widest uppercase text-textDark mb-6"
+            >
+              Explore
+            </h4>
+
+            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+              <li>
+                <a
+                  href="./index.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about-us.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./service.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./gallery.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./before-after.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Before & After
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./blogs.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="hover:text-textDark transition-colors"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-3">
+            <h4
+              class="text-xs font-medium tracking-widest uppercase text-textDark mb-6"
+            >
+              Treatments
+            </h4>
+
+            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+              <li>
+                <a href="#" class="hover:text-textDark transition-colors">
+                  Skin Treatments
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-textDark transition-colors">
+                  Hair Treatments
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-textDark transition-colors">
+                  Laser Treatments
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-textDark transition-colors">
+                  Aesthetic Treatments
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-3">
+            <h4
+              class="text-xs font-medium tracking-widest uppercase text-textDark mb-6"
+            >
+              Contact
+            </h4>
+            <ul class="space-y-4 text-sm text-textMuted">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                <span
+                  >123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai
+                  400703</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-primary"></i>
+                <span>+91 8928862682</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-envelope text-primary"></i>
+                <span>hello@skinique.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bottom Footer -->
+    
+    
+    <div
+      id="footer"
+      class="w-full border-t border-skinique-container py-4 px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-4 bg-white/50"
+    >
+      <p class="text-xs text-skinique-textLight">
+        © 2026 Skinique Dermatology. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <a
+          href="./privacy-policy.html"
+          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          >Privacy Policy</a
+        >
+        <a
+          href="./terms-condition.html"
+          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          >Terms & Conditions</a
+        >
+        <a
+          href="#"
+          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          >Sitemap</a
+        >
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.policy-section');
+            const navLinks = document.querySelectorAll('.toc-link');
+            const highlightBorder = document.getElementById('toc-highlight');
+            const tocNav = document.getElementById('toc-nav');
+
+            function updateHighlightBorder(activeLink) {
+                if (!activeLink || !highlightBorder || !tocNav) return;
+                const navRect = tocNav.getBoundingClientRect();
+                const linkRect = activeLink.getBoundingClientRect();
+                const verticalOffset = 4;
+                highlightBorder.style.top = `${linkRect.top - navRect.top + verticalOffset}px`;
+                highlightBorder.style.height = `${linkRect.height - verticalOffset * 2}px`;
+                highlightBorder.style.opacity = '1';
+            }
+
+            const initialActive = document.querySelector('.toc-link.active');
+            if (initialActive) setTimeout(() => updateHighlightBorder(initialActive), 100);
+
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter(e => e.isIntersecting);
+                if (visible.length > 0) {
+                    const id = visible[0].target.getAttribute('id');
+                    let found = null;
+                    navLinks.forEach(link => {
+                        link.classList.remove('active', 'text-primary', 'font-medium', 'bg-primary/5');
+                        link.classList.add('text-textMuted');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active', 'text-primary', 'font-medium', 'bg-primary/5');
+                            link.classList.remove('text-textMuted');
+                            found = link;
+                        }
+                    });
+                    if (found) requestAnimationFrame(() => updateHighlightBorder(found));
+                }
+            }, { root: null, rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(s => observer.observe(s));
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => {
+                        l.classList.remove('active', 'text-primary', 'font-medium', 'bg-primary/5');
+                        l.classList.add('text-textMuted');
+                    });
+                    this.classList.add('active', 'text-primary', 'font-medium', 'bg-primary/5');
+                    this.classList.remove('text-textMuted');
+                    requestAnimationFrame(() => updateHighlightBorder(this));
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const active = document.querySelector('.toc-link.active');
+                if (active) requestAnimationFrame(() => updateHighlightBorder(active));
+            });
+        });
+    </script>
+</body>
+</html>
