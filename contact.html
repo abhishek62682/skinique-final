@@ -4,7 +4,16 @@
     <title>Contact - Skinique</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/button.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -14,8 +23,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Syne', 'sans-serif'],
+                          sans: ["Inter", "sans-serif"],
+              heading: ["Hedvig Letters Sans", "sans-serif"],
                     },
                     colors: {
                         primary: '#C9B27C',
@@ -28,6 +37,8 @@
                     borderRadius: {
                         'custom': '4px',
                         'card': '8px',
+                         medium: "16px",
+              large: "32px",
                     }
                 }
             }
@@ -398,7 +409,7 @@
 
                     <!-- Right Column: High-End Form (60% width) -->
                     <div class="w-full lg:w-[60%] z-30">
-                        <div id="appointment-form" class="bg-white p-8 md:p-12 rounded-card border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative">
+                        <div id="appointment-form" class="bg-white p-8 md:p-12 rounded-medium border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative">
                             
                             <div class="mb-10">
                                 <h2 class="font-heading text-3xl md:text-[32px] font-bold text-textDark mb-3 tracking-tight">Request Consultation</h2>
@@ -447,12 +458,23 @@
                                 </div>
 
                                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
-                                    <button type="submit" aria-label="Book Appointment" class="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-textDark hover:bg-black rounded-custom interactive-btn shadow-sm flex items-center justify-center gap-3 focus-ring transition-all duration-300">
-                                        <span>Submit Request</span>
-                                    </button>
+
+                                    <button class="  primary-btn btn-variant-two">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Submit Request</span>
+          </button>
+                                   
                                     <p class="text-xs text-textMuted text-center sm:text-right max-w-[250px]">
                                         By submitting, you agree to our privacy policy.
                                     </p>
+
+
                                 </div>
                             </form>
                         </div>

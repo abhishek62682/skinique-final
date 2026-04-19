@@ -1,114 +1,133 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Skinique Dermatology</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/common.css" />
     <script>
-        window.FontAwesomeConfig = {
-            autoReplaceSvg: "nest",
-        };
+      window.FontAwesomeConfig = {
+        autoReplaceSvg: "nest",
+      };
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Inter", "sans-serif"],
-                        heading: ["Syne", "sans-serif"],
-                    },
-                    colors: {
-                        primary: "#C9B27C",
-                        primaryHover: "#b59e66",
-                        bgMain: "#FDF7EF",
-                        bgSection: "#F7ECDF",
-                        textDark: "#1A1A1A",
-                        textMuted: "#666666",
-                        skiniqueBorder: "#E8DCC8",
-                        skiniqueLight: "#8C8273",
-                    },
-                    borderRadius: {
-                        custom: "4px",
-                        card: "8px",
-                    },
-                    boxShadow: {
-                        soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
-                        float: "0 10px 30px -5px rgba(201, 178, 124, 0.15)",
-                    },
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Hedvig Letters Sans", "sans-serif"],
             },
-        };
+            colors: {
+              primary: "#C9B27C",
+              primaryHover: "#b59e66",
+              bgMain: "#FDF7EF",
+              bgSection: "#F7ECDF",
+              textDark: "#1A1A1A",
+              textMuted: "#666666",
+              skiniqueBorder: "#E8DCC8",
+              skiniqueLight: "#8C8273",
+            },
+            borderRadius: {
+              custom: "4px",
+              card: "8px",
+              medium: "16px",
+              large: "32px",
+            },
+            boxShadow: {
+              soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+              float: "0 10px 30px -5px rgba(201, 178, 124, 0.15)",
+            },
+          },
+        },
+      };
     </script>
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #fdf7ef;
-            color: #1a1a1a;
-            font-family: "Inter", sans-serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fdf7ef;
+        color: #1a1a1a;
+        font-family: "Inter", sans-serif;
+      }
 
-        ::-webkit-scrollbar {
-            display: none;
-        }
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
-        /* Masonry Grid CSS fallback */
+      /* Masonry Grid CSS fallback */
+      .masonry-grid {
+        column-count: 1;
+        column-gap: 24px;
+      }
+
+      @media (min-width: 768px) {
         .masonry-grid {
-            column-count: 1;
-            column-gap: 24px;
+          column-count: 2;
         }
+      }
 
-        @media (min-width: 768px) {
-            .masonry-grid {
-                column-count: 2;
-            }
+      @media (min-width: 1024px) {
+        .masonry-grid {
+          column-count: 3;
         }
+      }
 
-        @media (min-width: 1024px) {
-            .masonry-grid {
-                column-count: 3;
-            }
-        }
+      .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 24px;
+      }
 
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 24px;
-        }
+      /* Lightbox transitions */
+      .lightbox-enter {
+        opacity: 0;
+        transform: scale(0.95);
+      }
 
-        /* Lightbox transitions */
-        .lightbox-enter {
-            opacity: 0;
-            transform: scale(0.95);
-        }
+      .lightbox-enter-active {
+        opacity: 1;
+        transform: scale(1);
+        transition:
+          opacity 300ms,
+          transform 300ms;
+      }
 
-        .lightbox-enter-active {
-            opacity: 1;
-            transform: scale(1);
-            transition: opacity 300ms, transform 300ms;
-        }
+      .lightbox-exit {
+        opacity: 1;
+        transform: scale(1);
+      }
 
-        .lightbox-exit {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .lightbox-exit-active {
-            opacity: 0;
-            transform: scale(0.95);
-            transition: opacity 300ms, transform 300ms;
-        }
+      .lightbox-exit-active {
+        opacity: 0;
+        transform: scale(0.95);
+        transition:
+          opacity 300ms,
+          transform 300ms;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-       <!-- Top Promotional Banner -->
+  <body>
+    <!-- Top Promotional Banner -->
     <div
       id="promo-banner"
       class="fixed top-0 left-0 w-full z-[100] h-12 bg-textDark flex items-center justify-center px-4 shadow-md transition-transform duration-300"
@@ -119,9 +138,7 @@
             class="text-xs md:text-xs font-medium tracking-widest uppercase text-[#C9B27C] text-center"
             >20% Off on Laser Treatment – Limited Time</span
           >
-          
         </div>
-        
       </div>
     </div>
 
@@ -154,7 +171,7 @@
         <nav class="hidden md:flex items-center gap-8">
           <a
             href="./index.html"
-            class="text-md font-medium text-textMuted  interactive-link focus-ring"
+            class="text-md font-medium text-textMuted interactive-link focus-ring"
             >Home</a
           >
           <a
@@ -189,7 +206,7 @@
           >
         </nav>
 
-        <div class="flex flex-1  justify-end gap-4">
+        <div class="flex flex-1 justify-end gap-4">
           <button class="primary-btn">
             <span class="btn-fill"></span>
             <span class="btn-logo">
@@ -218,82 +235,85 @@
     </header>
 
     <!-- Mobile Menu Drawer -->
-   <div
-  id="mobile-menu"
-  class="fixed inset-y-0  right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
->
-  <div class="flex items-center justify-between p-6 border-b border-primary/10">
-    <span class="font-heading font-bold text-2xl tracking-tight text-textDark">
-      Skinique
-    </span>
-    <button
-      aria-label="Close Mobile Menu"
-      class="text-textDark p-2 focus-ring interactive-btn hover:text-primary transition-colors"
-      onclick="
-        document
-          .getElementById('mobile-menu')
-          .classList.add('translate-x-full')
-      "
+    <div
+      id="mobile-menu"
+      class="fixed inset-y-0 right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
     >
-      <i class="fa-solid fa-xmark text-2xl"></i>
-    </button>
-  </div>
+      <div
+        class="flex items-center justify-between p-6 border-b border-primary/10"
+      >
+        <span
+          class="font-heading font-bold text-2xl tracking-tight text-textDark"
+        >
+          Skinique
+        </span>
+        <button
+          aria-label="Close Mobile Menu"
+          class="text-textDark p-2 focus-ring interactive-btn hover:text-primary transition-colors"
+          onclick="
+            document
+              .getElementById('mobile-menu')
+              .classList.add('translate-x-full')
+          "
+        >
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
 
-  <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+      <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+        <!-- Active -->
+        <a
+          href="./index.html"
+          class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 interactive-link focus-ring"
+        >
+          Home
+        </a>
 
-    <!-- Active -->
-    <a
-      href="./index.html"
-      class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 interactive-link focus-ring"
-    >
-      Home
-    </a>
+        <a
+          href="./about-us.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          About
+        </a>
 
-    <a
-      href="./about-us.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      About
-    </a>
+        <a
+          href="./service.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          Services
+        </a>
 
-    <a
-      href="./service.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Services
-    </a>
+        <a
+          href="./gallery.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          Gallery
+        </a>
 
-    <a
-      href="./gallery.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Gallery
-    </a>
+        <a
+          href="./before-after.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          Before & After
+        </a>
 
-    <a
-      href="./before-after.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Before & After
-    </a>
+        <a
+          href="./blogs.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          Blog
+        </a>
 
-    <a
-      href="./blogs.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Blog
-    </a>
+        <a
+          href="./contact.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
+        >
+          Contact
+        </a>
 
-    <a
-      href="./contact.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Contact
-    </a>
-
-    <!-- CTA -->
-    <div class="mt-8 pt-8 border-t border-primary/10">
-       <button class="primary-btn">
+        <!-- CTA -->
+        <div class="mt-8 pt-8 border-t border-primary/10">
+          <button class="primary-btn">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -303,207 +323,368 @@
             </span>
             <span class="btn-text">Book Consultation</span>
           </button>
+        </div>
+      </nav>
     </div>
-
-  </nav>
-</div>
-
 
     <!-- Main Content: Gallery Section -->
-    <main id="main-content" class="pt-[128px] transition-all bg-bgMain duration-300">
-        <!-- Hero Section -->
-        <section id="blogs-hero" class="py-32 bg-bgMain">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="w-full">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-primary/30 rounded-full bg-bgMain/80 backdrop-blur-md shadow-sm"
+    <main
+      id="main-content"
+      class="pt-[128px] transition-all bg-bgMain duration-300"
+    >
+      <!-- Hero Section -->
+      <section id="blogs-hero" class="py-32 bg-bgMain">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="w-full">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-primary/30 rounded-full bg-bgMain/80 backdrop-blur-md shadow-sm"
+            >
+              <span
+                class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
+              ></span>
+              <span
+                class="text-xs font-bold tracking-widest uppercase text-textDark"
+                >Our Clinic</span
+              >
+            </div>
+
+            <h1
+              class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
+            >
+              Gallery <br />
+              Experience
+            </h1>
+
+            <p
+              class="text-xl text-textMuted leading-relaxed max-w-2xl font-normal"
+            >
+              Take a closer look at Skinique’s clinic environment, advanced
+              technology, and patient care moments that reflect our commitment
+              to excellence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery-layout" class="pb-32 bg-bgMain">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Category Filter Buttons -->
+          <div class="flex flex-wrap pb-10 items-center gap-3 font-sans">
+            <button
+              class="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-full transition-all shadow-soft hover:shadow-float focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              All Results
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Acne Treatment
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Anti-Aging
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Pigmentation
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Rosacea
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Scar Revision
+            </button>
+          </div>
+
+          <!-- Masonry Grid -->
+          <div id="masonry-grid" class="w-full masonry-grid">
+            <!-- Item 1 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img1')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1764c4d1c-fa11de6a84aafd6fb8c7.png"
+                  alt="High quality, professional before and after split screen photography of a patient showing clear skin improvement after acne treatment. Clean lighting, clinical but warm aesthetic."
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Severe Cystic Acne Resolution
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  12-week specialized protocol
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img2')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b1f24f9a12-8fbcb8da0b0091cd77d1.png"
+                  alt="High quality, professional close up photography of a patient"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Melasma Management
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  Laser therapy + topical regimen
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img3')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/df8cce7fb5-84ae8ad3e72af3e38290.png"
+                  alt="High quality, professional photography of a patient"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Comprehensive Rejuvenation
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  Collagen stimulation & injectables
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img4')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/28b93f9d5a-c70de6fdcd8eec23e219.png"
+                  alt="High quality, professional macro photography of skin texture improvement. Showing reduction in pore size and smoother skin surface."
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Texture Refinement
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  Microneedling series
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img5')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1764c4d1c-af8ffa5c8bcacbce5e0d.png"
+                  alt="High quality, professional before and after photography of a patient with rosacea showing significant reduction in redness and inflammation."
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Rosacea Control
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  Vascular laser treatment
+                </p>
+              </div>
+            </div>
+
+
+
+
+            <!-- Item 6 -->
+            <div
+              class="masonry-item group cursor-pointer"
+              onclick="openLightbox('img6')"
+            >
+              <div
+                class="relative overflow-hidden rounded-medium bg-bgSection mb-3"
+              >
+                <img
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1764c4d1c-af8ffa5c8bcacbce5e0d.png"
+                  alt="High quality, professional before and after photography of a patient with rosacea showing significant reduction in redness and inflammation."
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"
+                ></div>
+                <div
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-expand text-xs text-textDark"></i>
+                </div>
+              </div>
+              <div class="px-1">
+                <h3
+                  class="font-heading font-semibold text-lg text-textDark mb-1"
+                >
+                  Rosacea Control
+                </h3>
+                <p class="text-sm font-sans text-textMuted">
+                  Vascular laser treatment
+                </p>
+              </div>
+            </div>
+
+           
+          </div>
+
+          <!-- Load More Button -->
+          <div class="mt-16 text-center">
+
+             <button class="primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Load More Results</span>
+          </button>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20"
       >
-        <span
-          class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
-        ></span>
-        <span
-          class="text-xs font-bold tracking-widest uppercase text-textDark"
-          >Our Clinic</span
+        <div
+          class="bg-textDark text-white rounded-2xl overflow-hidden relative"
         >
-      </div>
+          <div class="absolute inset-0 opacity-20">
+            <img
+              class="w-full h-full object-cover"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3382df8161-88e7a12e2fe2adcaa710.png"
+            />
+          </div>
 
-      <h1
-        class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
-      >
-        Gallery <br />
-        Experience
-      </h1>
+          <div
+            class="relative z-10 px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-3xl mx-auto"
+          >
+            <span
+              class="text-primary text-xs font-semibold tracking-widest uppercase mb-6 block"
+            >
+              Ready to start?
+            </span>
 
-      <p
-        class="text-xl text-textMuted leading-relaxed max-w-2xl font-normal"
-      >
-        Take a closer look at Skinique’s clinic environment, advanced technology, and patient care moments that reflect our commitment to excellence.
-      </p>
-    </div>
-  </div>
-</section>
+            <h2
+              class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8"
+            >
+              Begin Your Transformation
+            </h2>
 
-        <!-- Gallery Section -->
-        <section id="gallery-layout" class="pb-32 bg-bgMain">
-            <div class="max-w-7xl mx-auto px-6">
-                <!-- Category Filter Buttons -->
-                <div class="flex flex-wrap pb-10 items-center gap-3 font-sans">
-                    <button class="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-full transition-all shadow-soft hover:shadow-float focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        All Results
-                    </button>
-                    <button class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Acne Treatment
-                    </button>
-                    <button class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Anti-Aging
-                    </button>
-                    <button class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Pigmentation
-                    </button>
-                    <button class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Rosacea
-                    </button>
-                    <button class="px-5 py-2.5 bg-bgSection text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Scar Revision
-                    </button>
-                </div>
+            <p
+              class="text-white/80 text-lg md:text-xl leading-relaxed font-light mb-12"
+            >
+              Schedule a comprehensive consultation to discuss if Advanced Laser
+              Resurfacing is the right protocol for your unique skin goals.
+            </p>
 
-                <!-- Masonry Grid -->
-                <div id="masonry-grid" class="w-full masonry-grid">
-                    <!-- Item 1 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img1')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1764c4d1c-fa11de6a84aafd6fb8c7.png" alt="High quality, professional before and after split screen photography of a patient showing clear skin improvement after acne treatment. Clean lighting, clinical but warm aesthetic." class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Severe Cystic Acne Resolution</h3>
-                            <p class="text-sm font-sans text-textMuted">12-week specialized protocol</p>
-                        </div>
-                    </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="bg-white text-textDark px-10 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-soft text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark"
+              >
+                Book Consultation
+              </button>
 
-                    <!-- Item 2 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img2')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b1f24f9a12-8fbcb8da0b0091cd77d1.png" alt="High quality, professional close up photography of a patient" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Melasma Management</h3>
-                            <p class="text-sm font-sans text-textMuted">Laser therapy + topical regimen</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img3')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/df8cce7fb5-84ae8ad3e72af3e38290.png" alt="High quality, professional photography of a patient" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Comprehensive Rejuvenation</h3>
-                            <p class="text-sm font-sans text-textMuted">Collagen stimulation & injectables</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img4')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/28b93f9d5a-c70de6fdcd8eec23e219.png" alt="High quality, professional macro photography of skin texture improvement. Showing reduction in pore size and smoother skin surface." class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Texture Refinement</h3>
-                            <p class="text-sm font-sans text-textMuted">Microneedling series</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img5')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1764c4d1c-af8ffa5c8bcacbce5e0d.png" alt="High quality, professional before and after photography of a patient with rosacea showing significant reduction in redness and inflammation." class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Rosacea Control</h3>
-                            <p class="text-sm font-sans text-textMuted">Vascular laser treatment</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="masonry-item group cursor-pointer" onclick="openLightbox('img6')">
-                        <div class="relative overflow-hidden rounded-card bg-bgSection mb-3">
-                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/df8cce7fb5-b6b958f487d1695f5255.png" alt="High quality, professional photography of a patient showing improvement in acne scarring on the jawline. Clean, dermatological aesthetic." class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-textDark/0 group-hover:bg-textDark/10 transition-colors duration-300"></div>
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-soft flex items-center gap-2">
-                                <i class="fa-solid fa-expand text-xs text-textDark"></i>
-                            </div>
-                        </div>
-                        <div class="px-1">
-                            <h3 class="font-heading font-semibold text-lg text-textDark mb-1">Acne Scar Revision</h3>
-                            <p class="text-sm font-sans text-textMuted">Fractional laser resurfacing</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Load More Button -->
-                <div class="mt-16 text-center">
-                    <button class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-primary text-primary rounded-custom text-sm font-medium hover:bg-primary hover:text-white transition-all shadow-soft focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                        Load More Results <i class="fa-solid fa-arrow-down text-xs"></i>
-                    </button>
-                </div>
+              <button
+                class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark"
+              >
+                View Pricing
+              </button>
             </div>
-        </section>
-
-
-
-         <!-- CTA Section -->
-        <section class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20">
-            <div class="bg-textDark text-white rounded-2xl overflow-hidden relative">
-                <div class="absolute inset-0 opacity-20">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3382df8161-88e7a12e2fe2adcaa710.png" />
-                </div>
-
-                <div class="relative z-10 px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-3xl mx-auto">
-                    <span class="text-primary text-xs font-semibold tracking-widest uppercase mb-6 block">
-                        Ready to start?
-                    </span>
-
-                    <h2 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8">
-                        Begin Your Transformation
-                    </h2>
-
-                    <p class="text-white/80 text-lg md:text-xl leading-relaxed font-light mb-12">
-                        Schedule a comprehensive consultation to discuss if Advanced Laser Resurfacing is the right protocol for your unique skin goals.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-white text-textDark px-10 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-soft text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark">
-                            Book Consultation
-                        </button>
-
-                        <button class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark">
-                            View Pricing
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer Navigation -->
@@ -520,31 +701,31 @@
               Premium dermatology and aesthetic clinic dedicated to revealing
               your natural beauty through science-backed treatments.
             </p>
-           <div class="flex gap-4">
-  <a
-    href="#"
-    aria-label="Instagram"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-instagram text-lg"></i>
-  </a>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
 
-  <a
-    href="#"
-    aria-label="Facebook"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-facebook-f text-lg"></i>
-  </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-facebook-f text-lg"></i>
+              </a>
 
-  <a
-    href="#"
-    aria-label="Twitter"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-twitter text-lg"></i>
-  </a>
-</div>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-twitter text-lg"></i>
+              </a>
+            </div>
           </div>
 
           <div class="md:col-span-2">
@@ -674,8 +855,7 @@
     </footer>
 
     <!-- Bottom Footer -->
-    
-    
+
     <div
       id="footer"
       class="w-full border-t border-skinique-container py-4 px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-4 bg-white/50"
@@ -703,78 +883,119 @@
     </div>
 
     <!-- Lightbox Modal (Hidden by default) -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 lg:p-12">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-textDark/90 backdrop-blur-md transition-opacity" onclick="closeLightbox()"></div>
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 lg:p-12"
+    >
+      <!-- Backdrop -->
+      <div
+        class="absolute inset-0 bg-textDark/90 backdrop-blur-md transition-opacity"
+        onclick="closeLightbox()"
+      ></div>
 
-        <!-- Modal Content -->
-        <div class="relative w-full max-w-6xl max-h-[90vh] flex flex-col lg:flex-row bg-bgMain rounded-card overflow-hidden shadow-2xl z-10">
-            <!-- Close Button -->
-            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-20 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-textDark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
+      <!-- Modal Content -->
+      <div
+        class="relative w-full max-w-6xl max-h-[90vh] flex flex-col lg:flex-row bg-bgMain rounded-card overflow-hidden shadow-2xl z-10"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeLightbox()"
+          class="absolute top-4 right-4 z-20 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-textDark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
 
-            <!-- Image Area -->
-            <div class="w-full lg:w-2/3 bg-bgSection flex items-center justify-center p-4 lg:p-8 min-h-[40vh] lg:min-h-[80vh]">
-                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ec4506833f-5e62bed7ae7a48419788.png" alt="High quality, detailed before and after split screen photography of a patient showing clear skin improvement after acne treatment. Clinical aesthetic." class="max-w-full max-h-full object-contain" />
-            </div>
-
-            <!-- Details Area -->
-            <div class="w-full lg:w-1/3 p-8 lg:p-12 overflow-y-auto flex flex-col justify-center">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-bgSection rounded-full text-primary text-xs font-semibold tracking-wider uppercase mb-6 w-max">
-                    Acne Treatment
-                </div>
-
-                <h2 class="font-heading text-3xl lg:text-4xl font-bold text-textDark leading-tight mb-4">
-                    Severe Cystic Acne Resolution
-                </h2>
-
-                <p class="text-textMuted font-sans mb-8 leading-relaxed">
-                    This patient presented with persistent cystic acne that had not responded to over-the-counter treatments. After a comprehensive consultation, we developed a personalized 12-week protocol combining prescription topicals and targeted clinical extractions.
-                </p>
-
-                <div class="space-y-6 mb-10">
-                    <div>
-                        <h4 class="font-sans text-xs font-semibold text-textDark uppercase tracking-wider mb-2">Duration</h4>
-                        <p class="font-sans text-sm text-textMuted">12 Weeks</p>
-                    </div>
-                    <div>
-                        <h4 class="font-sans text-xs font-semibold text-textDark uppercase tracking-wider mb-2">Treatments Used</h4>
-                        <ul class="font-sans text-sm text-textMuted space-y-1">
-                            <li>• Prescription Retinoid Therapy</li>
-                            <li>• Clinical Extractions</li>
-                            <li>• Customized Barrier Repair Routine</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="#" class="w-full bg-primary text-white px-8 py-4 rounded-custom text-sm font-medium hover:bg-primaryHover transition-all text-center shadow-soft focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgSection">
-                    Book Similar Consultation
-                </a>
-            </div>
+        <!-- Image Area -->
+        <div
+          class="w-full lg:w-2/3 bg-bgSection flex items-center justify-center p-4 lg:p-8 min-h-[40vh] lg:min-h-[80vh]"
+        >
+          <img
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ec4506833f-5e62bed7ae7a48419788.png"
+            alt="High quality, detailed before and after split screen photography of a patient showing clear skin improvement after acne treatment. Clinical aesthetic."
+            class="max-w-full max-h-full object-contain"
+          />
         </div>
+
+        <!-- Details Area -->
+        <div
+          class="w-full lg:w-1/3 p-8 lg:p-12 overflow-y-auto flex flex-col justify-center"
+        >
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-bgSection rounded-full text-primary text-xs font-semibold tracking-wider uppercase mb-6 w-max"
+          >
+            Acne Treatment
+          </div>
+
+          <h2
+            class="font-heading text-3xl lg:text-4xl font-bold text-textDark leading-tight mb-4"
+          >
+            Severe Cystic Acne Resolution
+          </h2>
+
+          <p class="text-textMuted font-sans mb-8 leading-relaxed">
+            This patient presented with persistent cystic acne that had not
+            responded to over-the-counter treatments. After a comprehensive
+            consultation, we developed a personalized 12-week protocol combining
+            prescription topicals and targeted clinical extractions.
+          </p>
+
+          <div class="space-y-6 mb-10">
+            <div>
+              <h4
+                class="font-sans text-xs font-semibold text-textDark uppercase tracking-wider mb-2"
+              >
+                Duration
+              </h4>
+              <p class="font-sans text-sm text-textMuted">12 Weeks</p>
+            </div>
+            <div>
+              <h4
+                class="font-sans text-xs font-semibold text-textDark uppercase tracking-wider mb-2"
+              >
+                Treatments Used
+              </h4>
+              <ul class="font-sans text-sm text-textMuted space-y-1">
+                <li>• Prescription Retinoid Therapy</li>
+                <li>• Clinical Extractions</li>
+                <li>• Customized Barrier Repair Routine</li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="w-full bg-primary text-white px-8 py-4 rounded-custom text-sm font-medium hover:bg-primaryHover transition-all text-center shadow-soft focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgSection"
+          >
+            Book Similar Consultation
+          </a>
+        </div>
+      </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script>
-        function openLightbox(imageId) {
-            const lightbox = document.getElementById("lightbox");
-            lightbox.classList.remove("hidden");
-            document.body.style.overflow = "hidden";
-        }
+      function openLightbox(imageId) {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
 
-        function closeLightbox() {
-            const lightbox = document.getElementById("lightbox");
-            lightbox.classList.add("hidden");
-            document.body.style.overflow = "";
-        }
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
 
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                closeLightbox();
-            }
-        });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

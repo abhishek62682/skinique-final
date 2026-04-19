@@ -2,7 +2,16 @@
 <html class="">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         window.FontAwesomeConfig = {
@@ -17,8 +26,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ["Inter", "sans-serif"],
-                        heading: ["Syne", "sans-serif"],
+                          sans: ["Inter", "sans-serif"],
+              heading: ["Hedvig Letters Sans", "sans-serif"],
                     },
                     colors: {
                         primary: "#C9B27C",
@@ -33,6 +42,8 @@
                     borderRadius: {
                         custom: "4px",
                         card: "8px",
+                         medium: "16px",
+              large: "32px",
                     },
                     boxShadow: {
                         soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
@@ -344,7 +355,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-20 grid-flow-row-dense">
                     <!-- Large Featured Card (Spans 6 cols) -->
                     <article class="col-span-1 md:col-span-6 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-8 rounded-lg aspect-video shadow-cardLarge border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-8 rounded-medium aspect-video shadow-cardLarge border border-skiniqueBorder">
                             <img loading="lazy" class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0e8b469c35-a5802462e0259bc7af5b.png" alt="minimalist flatlay of premium skincare products on warm neutral background soft lighting" />
                             <div class="absolute top-6 left-6 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-4 py-2 rounded-full border border-skiniqueBorder/50">Skin</span>
@@ -372,7 +383,7 @@
 
                     <!-- Large Featured Card (Spans 6 cols) -->
                     <article class="col-span-1 md:col-span-6 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-8 rounded-lg aspect-video shadow-cardLarge border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-8 rounded-medium aspect-video shadow-cardLarge border border-skiniqueBorder">
                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dfa39c4c77-fe0927821d2ce5929271.png" alt="aesthetic setup of clinical dermatology tools and premium creams on marble" />
                             <div class="absolute top-6 left-6 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-4 py-2 rounded-full border border-skiniqueBorder/50">Laser</span>
@@ -400,7 +411,7 @@
 
                     <!-- Standard Card (Spans 4 cols) -->
                     <article class="col-span-1 md:col-span-4 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-6 rounded-lg aspect-square shadow-cardSmall border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-6 rounded-medium aspect-square shadow-cardSmall border border-skiniqueBorder">
                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/44d0ab28ad-7419e57e08d2d35fb051.png" alt="close up of healthy glowing skin texture soft natural lighting warm tones" />
                             <div class="absolute top-4 left-4 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-3 py-1.5 rounded-full border border-skiniqueBorder/50">Laser</span>
@@ -424,7 +435,7 @@
 
                     <!-- Standard Card (Spans 4 cols) -->
                     <article class="col-span-1 md:col-span-4 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-6 rounded-lg aspect-square shadow-cardSmall border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-6 rounded-medium aspect-square shadow-cardSmall border border-skiniqueBorder">
                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2ce6b132bb-7577f902e2899428547e.png" alt="minimalist bathroom sink setup with elegant hair care bottles soft morning light" />
                             <div class="absolute top-4 left-4 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-3 py-1.5 rounded-full border border-skiniqueBorder/50">Hair</span>
@@ -448,7 +459,7 @@
 
                     <!-- Standard Card (Spans 4 cols) -->
                     <article class="col-span-1 md:col-span-4 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-6 rounded-lg aspect-square shadow-cardSmall border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-6 rounded-medium aspect-square shadow-cardSmall border border-skiniqueBorder">
                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/908b3e18f2-610fe87d4a412f62ea00.png" alt="abstract soft fluid liquid texture in warm peach and cream tones" />
                             <div class="absolute top-4 left-4 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-3 py-1.5 rounded-full border border-skiniqueBorder/50">Skin</span>
@@ -472,7 +483,7 @@
 
                     <!-- Standard Card (Spans 4 cols) -->
                     <article class="col-span-1 md:col-span-4 flex flex-col text-left bg-transparent group cursor-pointer pb-12">
-                        <div class="relative w-full overflow-hidden mb-6 rounded-lg aspect-square shadow-cardSmall border border-skiniqueBorder">
+                        <div class="relative w-full overflow-hidden mb-6 rounded-medium aspect-square shadow-cardSmall border border-skiniqueBorder">
                             <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/cfa2811614-d1707bf52e53b00521d3.png" alt="sunlight hitting a glass bottle of serum casting beautiful reflections" />
                             <div class="absolute top-4 left-4 z-30">
                                 <span class="bg-bgMain/90 backdrop-blur-sm text-textDark text-xs font-bold uppercase tracking-widest font-sans px-3 py-1.5 rounded-full border border-skiniqueBorder/50">Skin</span>

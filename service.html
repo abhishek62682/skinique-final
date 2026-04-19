@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Skinique</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/common.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +19,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        heading: ['Syne', 'sans-serif'],
+                       heading: [ "Hedvig Letters Sans", "sans-serif"],
                     },
                     colors: {
                         primary: '#C9B27C',
@@ -27,9 +30,12 @@
                         textMuted: '#666666',
                     },
                     borderRadius: {
-                        'custom': '4px',
-                        'card': '8px',
-                    }
+              custom: "4px",
+              card: "8px",
+
+               medium: "16px",
+  large: "32px",
+            },
                 }
             }
         }
@@ -343,12 +349,15 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Card 1 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                           <div>
+                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-droplet text-xl"></i>
                             </div>
                             <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Acne Management</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive medical approach to clear active breakouts and prevent future occurrences through targeted therapies.</p>
+                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive medical approach to clear active breakouts and prevent future occurrences through targeted therapies. 
+                            </p>
+                           </div>
                             <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
                                 <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹2,500</span>
                                 <a href="#" aria-label="Learn more about Acne Management" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
@@ -356,12 +365,16 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                            <div >
+
+                              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-sun text-xl"></i>
                             </div>
                             <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Pigmentation Correction</h3>
                             <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Advanced laser and topical treatments to address melasma, sun spots, and uneven skin tone for a luminous complexion.</p>
+                              
+                            </div>
                             <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
                                 <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹4,000</span>
                                 <a href="#" aria-label="Learn more about Pigmentation Correction" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
@@ -369,12 +382,14 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                            <div class="">
+                              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-leaf text-xl"></i>
                             </div>
                             <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Chemical Peels</h3>
                             <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Customized medical-grade exfoliations to reveal fresher, smoother skin and address fine lines and dullness.</p>
+                            </div>
                             <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
                                 <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹3,000</span>
                                 <a href="#" aria-label="Learn more about Chemical Peels" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
@@ -382,7 +397,7 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-sparkles text-xl"></i>
                             </div>
@@ -395,7 +410,7 @@
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                             </div>
@@ -418,7 +433,7 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Card 1 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-user-hair text-xl"></i>
                             </div>
@@ -431,7 +446,7 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-vial text-xl"></i>
                             </div>
@@ -444,7 +459,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-head-side text-xl"></i>
                             </div>
@@ -467,7 +482,7 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Card 1 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-syringe text-xl"></i>
                             </div>
@@ -480,7 +495,7 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-face-smile text-xl"></i>
                             </div>
@@ -493,7 +508,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-hourglass-half text-xl"></i>
                             </div>
@@ -506,7 +521,7 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="group border border-primary/20 rounded-card p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
+                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-bolt text-xl"></i>
                             </div>

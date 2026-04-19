@@ -41,7 +41,7 @@
           extend: {
             fontFamily: {
               sans: ["Inter", "sans-serif"],
-              heading: ["Syne", "sans-serif"],
+              heading: [ "Hedvig Letters Sans", "sans-serif"],
             },
             colors: {
               primary: "#C9B27C",
@@ -51,10 +51,11 @@
               textDark: "#1A1A1A",
               textMuted: "#666666",
             },
-            borderRadius: {
-              custom: "4px",
-              card: "8px",
-            },
+           borderRadius: {
+  card: "8px",
+  medium: "16px",
+  large: "32px",
+},
             boxShadow: {
               soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
               float: "0 10px 30px -5px rgba(201, 178, 124, 0.15)",
@@ -465,7 +466,7 @@
       <!-- Hero Section -->
       <section id="hero" class="max-w-7xl mt-[20px] mx-auto">
         <div
-          class="relative lg:rounded-[50px] h-[800px] w-full flex items-center justify-center text-center overflow-hidden"
+          class="relative lg:rounded-large h-[800px] w-full flex items-center justify-center text-center overflow-hidden"
         >
           <div class="absolute bg-iii inset-0 z-0 bg-bgMain img-placeholder">
             <img
@@ -580,7 +581,7 @@
             </div>
             <div class="grid grid-cols-2 gap-4">
               <div
-                class="h-[400px] rounded-[8px] overflow-hidden mt-12 shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgSection img-placeholder"
+                class="h-[400px] rounded-medium overflow-hidden mt-12 shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgSection img-placeholder"
               >
                 <img
                   class="w-full h-full object-cover hover:scale-105 transition-all duration-700 opacity-0"
@@ -591,7 +592,7 @@
                 />
               </div>
               <div
-                class="h-[400px] rounded-[8px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgSection img-placeholder"
+                class="h-[400px] rounded-medium overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgSection img-placeholder"
               >
                 <img
                   class="w-full h-full object-cover hover:scale-105 transition-all duration-700 opacity-0"
@@ -628,7 +629,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Skin Treatments -->
             <div
-              class="group relative h-[500px] rounded-[8px] overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
+              class="group relative h-[500px] rounded-medium overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
               tabindex="0"
             >
               <img
@@ -665,7 +666,7 @@
 
             <!-- Hair Treatments -->
             <div
-              class="group relative h-[500px] rounded-[8px] overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
+              class="group relative h-[500px] rounded-medium overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
               tabindex="0"
             >
               <img
@@ -704,7 +705,7 @@
 
             <!-- Aesthetic Treatments -->
             <div
-              class="group relative h-[500px] rounded-[8px] overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
+              class="group relative h-[500px] rounded-medium overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.08)] bg-bgMain img-placeholder focus-ring"
               tabindex="0"
             >
               <img
@@ -748,7 +749,7 @@
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div
-              class="lg:col-span-5 relative h-[700px] rounded-[8px] overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.1)] bg-bgSection img-placeholder"
+              class="lg:col-span-5 relative h-[700px] rounded-medium overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.1)] bg-bgSection img-placeholder"
             >
               <img
                 class="w-full h-full object-cover opacity-0 transition-opacity duration-500"
@@ -818,7 +819,7 @@
                 </div>
               </div>
 
-               <button class=" hidden md:block primary-btn">
+               <button class="  primary-btn">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -862,7 +863,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -880,7 +881,7 @@
             </div>
 
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -897,7 +898,7 @@
             </div>
 
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -914,7 +915,7 @@
             </div>
 
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -931,7 +932,7 @@
             </div>
 
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -948,7 +949,7 @@
             </div>
 
             <div
-              class="bg-white p-10 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
+              class="bg-white p-10 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-left group"
             >
               <div
                 class="w-14 h-14 rounded-full bg-bgSection flex items-center justify-center mb-8 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300"
@@ -988,7 +989,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 text-left">
             <div
-              class="bg-white p-8 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
+              class="bg-white p-8 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
             >
               <h3
                 class="font-heading text-2xl font-bold mb-2 text-textDark uppercase tracking-tight"
@@ -1041,7 +1042,7 @@
             </div>
 
             <div
-              class="bg-white p-8 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
+              class="bg-white p-8 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
             >
               <h3
                 class="font-heading text-2xl font-bold mb-2 text-textDark uppercase tracking-tight"
@@ -1094,12 +1095,20 @@
             </div>
           </div>
 
-          <a
-            href="./before-after.html"
-            class="inline-flex items-center justify-center px-10 py-4 text-sm font-bold tracking-widest uppercase text-textDark border border-textDark hover:bg-textDark hover:text-white rounded-[50px] transition-all duration-300 hover:scale-105 bg-transparent"
-          >
-            View All Results
+
+          <a   href="./before-after.html" class="  primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">View All Results</span>
           </a>
+
+
+         
         </div>
       </section>
 
@@ -1153,7 +1162,7 @@
                 <!-- Testimonial 1 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1191,7 +1200,7 @@
                 <!-- Testimonial 2 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1229,7 +1238,7 @@
                 <!-- Testimonial 3 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1267,7 +1276,7 @@
                 <!-- Testimonial 4 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1338,7 +1347,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <a
               href="#"
-              class="group block bg-white p-6 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
+              class="group block bg-white p-6 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
             >
               <div class="h-[400px] rounded-[4px] overflow-hidden mb-6">
                 <img
@@ -1364,7 +1373,7 @@
 
             <a
               href="#"
-              class="group block bg-white p-6 rounded-[8px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
+              class="group block bg-white p-6 rounded-medium shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-primary/10 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300"
             >
               <div class="h-[400px] rounded-[4px] overflow-hidden mb-6">
                 <img
@@ -1409,11 +1418,11 @@
           <div class="space-y-4">
             <div
               id="faq-1"
-              class="faq-item group bg-white border border-primary/20 rounded-[8px] shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              class="faq-item group bg-white border border-primary/20 rounded-medium shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
               <button
                 onclick="toggleFaq('faq-1')"
-                class="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
               >
                 <h4
                   class="font-heading text-xl font-bold text-textDark group-[.active]:text-primary transition-colors"
@@ -1443,11 +1452,11 @@
 
             <div
               id="faq-2"
-              class="faq-item group bg-white border border-primary/20 rounded-[8px] shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              class="faq-item group bg-white border border-primary/20 rounded-medium shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
               <button
                 onclick="toggleFaq('faq-2')"
-                class="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
               >
                 <h4
                   class="font-heading text-xl font-bold text-textDark group-[.active]:text-primary transition-colors"
@@ -1477,11 +1486,11 @@
 
             <div
               id="faq-3"
-              class="faq-item group bg-white border border-primary/20 rounded-[8px] shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              class="faq-item group bg-white border border-primary/20 rounded-medium shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
               <button
                 onclick="toggleFaq('faq-3')"
-                class="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
               >
                 <h4
                   class="font-heading text-xl font-bold text-textDark group-[.active]:text-primary transition-colors"
@@ -1512,11 +1521,11 @@
 
             <div
               id="faq-4"
-              class="faq-item group bg-white border border-primary/20 rounded-[8px] shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+              class="faq-item group bg-white border border-primary/20 rounded-medium shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
             >
               <button
                 onclick="toggleFaq('faq-4')"
-                class="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
               >
                 <h4
                   class="font-heading text-xl font-bold text-textDark group-[.active]:text-primary transition-colors"

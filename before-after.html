@@ -7,6 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/common.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -24,8 +31,8 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              heading: ["Syne", "sans-serif"],
+               sans: ["Inter", "sans-serif"],
+              heading: ["Hedvig Letters Sans", "sans-serif"],
             },
             colors: {
               primary: "#C9B27C",
@@ -36,9 +43,12 @@
               textMuted: "#666666",
             },
             borderRadius: {
-              custom: "4px",
-              card: "8px",
-            },
+  custom: "4px",
+  card: "16px",
+
+  medium: "16px",
+              large: "32px",
+},
             boxShadow: {
               soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
               float: "0 10px 30px -5px rgba(201, 178, 124, 0.15)",
@@ -365,7 +375,7 @@
             </div>
 
             <h1
-              class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
+              class="font-heading text-[8vw] sm:text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase "
             >
               Before & After <br />
               Transformations
@@ -396,54 +406,40 @@
               Before & After
             </h2>
 
-            <!-- Premium Filter Tabs -->
-            <div
-              class="flex flex-wrap items-center gap-4 bg-white/50 backdrop-blur-sm p-2 rounded-full border border-primary/20 shadow-[0_4px_20px_rgba(0,0,0,0.03)] w-fit"
-              role="tablist"
+             <!-- Category Filter Buttons -->
+          <!-- <div class="flex flex-wrap pb-10 items-center gap-3 font-sans">
+            <button
+              class="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-full transition-all shadow-soft hover:shadow-float focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
             >
-              <button
-                role="tab"
-                aria-selected="true"
-                aria-label="Show all results"
-                class="text-sm font-bold tracking-widest uppercase px-6 py-2.5 rounded-full bg-textDark text-white shadow-md transition-all duration-300 interactive-link focus-ring"
-              >
-                All
-              </button>
-              <button
-                role="tab"
-                aria-selected="false"
-                aria-label="Show skin results"
-                class="text-sm font-medium tracking-widest uppercase px-6 py-2.5 rounded-full text-textMuted hover:text-textDark hover:bg-white/80 transition-all duration-300 interactive-link focus-ring"
-              >
-                Skin
-              </button>
-              <button
-                role="tab"
-                aria-selected="false"
-                aria-label="Show hair results"
-                class="text-sm font-medium tracking-widest uppercase px-6 py-2.5 rounded-full text-textMuted hover:text-textDark hover:bg-white/80 transition-all duration-300 interactive-link focus-ring"
-              >
-                Hair
-              </button>
-              <button
-                role="tab"
-                aria-selected="false"
-                aria-label="Show aesthetic results"
-                class="text-sm font-medium tracking-widest uppercase px-6 py-2.5 rounded-full text-textMuted hover:text-textDark hover:bg-white/80 transition-all duration-300 interactive-link focus-ring"
-              >
-                Aesthetic
-              </button>
-            </div>
+              All Results
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgMain text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Skin
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgMain text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Laser
+            </button>
+            <button
+              class="px-5 py-2.5 bg-bgMain text-textDark text-sm font-medium rounded-full hover:border-primary/30 border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bgMain"
+            >
+              Hair
+            </button>
+            
+          </div> -->
           </div>
 
           <!-- Gallery Grid -->
           <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- Gallery Item 1 -->
             <div
-              class="bg-bgMain p-8 rounded-card shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+              class="bg-bgMain p-8 rounded-medium shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
             >
               <div
-                class="relative h-[350px] rounded-custom overflow-hidden mb-6 group ba-slider-container select-none"
+                class="relative h-[350px] rounded-medium overflow-hidden mb-6 group ba-slider-container select-none"
               >
                 <div class="absolute inset-0 w-full h-full">
                   <img
@@ -513,10 +509,10 @@
 
             <!-- Gallery Item 2 -->
             <div
-              class="bg-bgMain p-8 rounded-card shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+              class="bg-bgMain p-8 rounded-medium shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
             >
               <div
-                class="relative h-[350px] rounded-custom overflow-hidden mb-6 group ba-slider-container select-none"
+                class="relative h-[350px] rounded-medium overflow-hidden mb-6 group ba-slider-container select-none"
               >
                 <div class="absolute inset-0 w-full h-full">
                   <img
@@ -586,10 +582,10 @@
 
             <!-- Gallery Item 3 (Hair) -->
             <div
-              class="bg-bgMain p-8 rounded-card shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+              class="bg-bgMain p-8 rounded-medium shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
             >
               <div
-                class="relative h-[350px] rounded-custom overflow-hidden mb-6 group ba-slider-container select-none"
+                class="relative h-[350px] rounded-medium overflow-hidden mb-6 group ba-slider-container select-none"
               >
                 <div class="absolute inset-0 w-full h-full">
                   <img
@@ -657,10 +653,10 @@
 
             <!-- Gallery Item 4 (Aesthetic) -->
             <div
-              class="bg-bgMain p-8 rounded-card shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+              class="bg-bgMain p-8 rounded-medium shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
             >
               <div
-                class="relative h-[350px] rounded-custom overflow-hidden mb-6 group ba-slider-container select-none"
+                class="relative h-[350px] rounded-medium overflow-hidden mb-6 group ba-slider-container select-none"
               >
                 <div class="absolute inset-0 w-full h-full">
                   <img
@@ -761,7 +757,7 @@
 
       <!-- Transformation Videos -->
       <section id="transformation-videos" class="py-24 bg-bgMain text-left">
-        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
           <div
             class="mb-16 border-b-2 border-primary/20 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-8"
           >
@@ -930,12 +926,19 @@
             >
               Explore more success stories
             </p>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-10 py-4 text-sm font-bold tracking-widest uppercase text-white bg-textDark hover:bg-primary rounded-[4px] transition-colors focus-ring shadow-md"
-            >
-              View All Videos
-            </a>
+
+
+              <a class="  primary-btn ">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">View All Videos</span>
+          </a>
+           
           </div>
         </div>
       </section>
@@ -949,38 +952,40 @@
           <div
             class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
           >
-            <div class="max-w-xl">
-              <div
-                class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-6"
-              >
-                <i class="fa-solid fa-quote-right text-xl"></i>
-              </div>
-              <h2
-                class="font-heading text-4xl md:text-5xl font-bold text-textDark tracking-tight mb-4"
-              >
-                Patient Stories
-              </h2>
-              <p class="text-lg text-textMuted">
-                Discover how we've helped our patients achieve their aesthetic
-                goals with natural-looking, beautiful results.
-              </p>
-            </div>
+           <div class="max-w-xl">
+  <span
+    class="text-sm font-medium tracking-widest uppercase text-primary mb-4 block"
+  >
+    Real Results
+  </span>
+
+  <h2
+    class="font-heading text-4xl md:text-5xl font-bold text-textDark tracking-tight mb-4"
+  >
+    Patient Transformations
+  </h2>
+
+  <p class="text-lg text-textMuted">
+    Hear from our patients and explore real treatment outcomes from acne and pigmentation to advanced skin rejuvenation delivered with precision, care, and natural-looking results.
+  </p>
+</div>
 
             <!-- Carousel Navigation -->
             <div class="flex items-center gap-3">
-              <button
-                class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-textDark hover:bg-primary/5 transition-colors swiper-button-prev-custom"
-                aria-label="Previous testimonial"
-              >
-                <i class="fa-solid fa-arrow-left text-sm"></i>
-              </button>
-              <button
-                class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-textDark hover:bg-primary/5 transition-colors swiper-button-next-custom"
-                aria-label="Next testimonial"
-              >
-                <i class="fa-solid fa-arrow-right text-sm"></i>
-              </button>
-            </div>
+  <button
+    class="w-10 h-10 rounded-full border border-primary/60 flex items-center justify-center text-textDark hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 swiper-button-prev-custom"
+    aria-label="Previous testimonial"
+  >
+    <i class="fa-solid fa-arrow-left text-sm"></i>
+  </button>
+
+  <button
+    class="w-10 h-10 rounded-full border border-primary/60 flex items-center justify-center text-textDark hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 swiper-button-next-custom"
+    aria-label="Next testimonial"
+  >
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+  </button>
+</div>
           </div>
 
           <div class="relative w-full overflow-visible">
@@ -989,7 +994,7 @@
                 <!-- Testimonial 1 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1012,13 +1017,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="flex gap-1 mb-6 text-primary">
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                    </div>
+
                     <p
                       class="text-textDark text-lg leading-relaxed font-medium flex-grow"
                     >
@@ -1033,7 +1032,7 @@
                 <!-- Testimonial 2 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1056,13 +1055,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="flex gap-1 mb-6 text-primary">
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                    </div>
+
                     <p
                       class="text-textDark text-lg leading-relaxed font-medium flex-grow"
                     >
@@ -1077,7 +1070,7 @@
                 <!-- Testimonial 3 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1100,13 +1093,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="flex gap-1 mb-6 text-primary">
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                    </div>
+
                     <p
                       class="text-textDark text-lg leading-relaxed font-medium flex-grow"
                     >
@@ -1121,7 +1108,7 @@
                 <!-- Testimonial 4 -->
                 <div class="swiper-slide h-auto w-full max-w-[400px]">
                   <div
-                    class="h-full bg-white p-8 md:p-10 rounded-[16px] flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+                    class="h-full bg-white p-8 md:p-10 rounded-medium flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-primary/5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-shadow duration-300"
                   >
                     <div class="flex items-center gap-4 mb-8">
                       <div
@@ -1144,13 +1131,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="flex gap-1 mb-6 text-primary">
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star text-sm"></i>
-                      <i class="fa-solid fa-star-half-stroke text-sm"></i>
-                    </div>
+
                     <p
                       class="text-textDark text-lg leading-relaxed font-medium flex-grow"
                     >

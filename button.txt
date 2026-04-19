@@ -1,0 +1,10 @@
+  <button class="  primary-btn btn-variant-two">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Book an Appointment</span>
+          </button>
