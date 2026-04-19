@@ -10,7 +10,7 @@
   font-weight: 500;
   color:#000;
   background-color: #f7ecdf;
-  padding: 14px 24px 14px 14px;
+  padding: 12px 24px 12px 14px;
   border: none;
   border-radius: 100px;
   display: inline-flex;
@@ -19,6 +19,7 @@
   gap: 10px !important;
   overflow: hidden;
   z-index: 1;
+ 
 }
 
 .btn-fill {

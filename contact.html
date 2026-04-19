@@ -1,6 +1,8 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Skinique</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/button.css" />
@@ -14,298 +16,759 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                          sans: ["Inter", "sans-serif"],
+      window.FontAwesomeConfig = { autoReplaceSvg: "nest" };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
               heading: ["Hedvig Letters Sans", "sans-serif"],
-                    },
-                    colors: {
-                        primary: '#C9B27C',
-                        primaryHover: '#b59e66',
-                        bgMain: '#FDF7EF',
-                        bgSection: '#F7ECDF',
-                        textDark: '#1A1A1A',
-                        textMuted: '#666666',
-                    },
-                    borderRadius: {
-                        'custom': '4px',
-                        'card': '8px',
-                         medium: "16px",
+            },
+            colors: {
+              primary: "#C9B27C",
+              primaryHover: "#b59e66",
+              bgMain: "#FDF7EF",
+              bgSection: "#F7ECDF",
+              textDark: "#1A1A1A",
+              textMuted: "#666666",
+            },
+            borderRadius: {
+              custom: "4px",
+              card: "8px",
+              medium: "16px",
               large: "32px",
-                    }
-                }
-            }
-        }
+            },
+          },
+        },
+      };
     </script>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #FDF7EF;
-            color: #1A1A1A;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fdf7ef;
+        color: #1a1a1a;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Syne", sans-serif;
+        font-style: normal !important;
+      }
+      p,
+      span,
+      div,
+      a,
+      button,
+      input,
+      textarea,
+      select {
+        font-style: normal !important;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .hero-overlay {
+        background: rgba(253, 247, 239, 0.4);
+      }
+      /* FAQ Accordion Transitions */
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+      }
+      details[open] .faq-content {
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      /* Interactive Micro-states */
+      .interactive-btn {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .interactive-btn:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(201, 178, 124, 0.3);
+      }
+      .interactive-btn:active {
+        transform: scale(0.98);
+      }
+      .interactive-link {
+        transition: all 0.3s ease;
+      }
+      .interactive-link:hover {
+        color: #c9b27c;
+        transform: translateY(-1px);
+      }
+      .interactive-link:active {
+        transform: translateY(1px);
+      }
+      .focus-ring {
+        outline: none;
+      }
+      .focus-ring:focus-visible {
+        box-shadow: 0 0 0 3px rgba(201, 178, 124, 0.5);
+      }
+
+      /* Image Placeholder Animation */
+      .img-placeholder {
+        background: linear-gradient(
+          90deg,
+          #fdf7ef 0%,
+          #f7ecdf 50%,
+          #fdf7ef 100%
+        );
+        background-size: 200% 100%;
+        animation: pulse-bg 1.5s infinite;
+      }
+      @keyframes pulse-bg {
+        0% {
+          background-position: 200% 0;
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Syne', sans-serif;
-            font-style: normal !important;
+        100% {
+          background-position: -200% 0;
         }
-        p, span, div, a, button, input, textarea, select {
-            font-style: normal !important;
-        }
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        .hero-overlay {
-            background: rgba(253,247,239,0.4);
-        }
-        /* FAQ Accordion Transitions */
-        .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-        }
-        details[open] .faq-content {
-            max-height: 500px;
-            opacity: 1;
-        }
-        
-        /* Interactive Micro-states */
-        .interactive-btn {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .interactive-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 40px rgba(201,178,124,0.3);
-        }
-        .interactive-btn:active {
-            transform: scale(0.98);
-        }
-        .interactive-link {
-            transition: all 0.3s ease;
-        }
-        .interactive-link:hover {
-            color: #C9B27C;
-            transform: translateY(-1px);
-        }
-        .interactive-link:active {
-            transform: translateY(1px);
-        }
-        .focus-ring {
-            outline: none;
-        }
-        .focus-ring:focus-visible {
-            box-shadow: 0 0 0 3px rgba(201,178,124,0.5);
-        }
-        
-        /* Image Placeholder Animation */
-        .img-placeholder {
-            background: linear-gradient(90deg, #FDF7EF 0%, #F7ECDF 50%, #FDF7EF 100%);
-            background-size: 200% 100%;
-            animation: pulse-bg 1.5s infinite;
-        }
-        @keyframes pulse-bg {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
+      }
     </style>
-</head>
-<body>
-
-       <!-- Top Promotional Banner -->
-    <div
-      id="promo-banner"
-      class="fixed top-0 left-0 w-full z-[100] h-12 bg-textDark flex items-center justify-center px-4 shadow-md transition-transform duration-300"
-    >
-      <div class="flex items-center justify-center w-full max-w-7xl mx-auto">
-        <div class="flex items-center justify-center gap-4 flex-1">
-          <span
-            class="text-xs md:text-xs font-medium tracking-widest uppercase text-[#C9B27C] text-center"
-            >20% Off on Laser Treatment – Limited Time</span
-          >
-          
-        </div>
-        
-      </div>
-    </div>
-
+  </head>
+  <body>
     <!-- Mobile Sticky FAB -->
     <div class="md:hidden fixed bottom-6 right-6 z-[70]">
       <a
         href="#booking"
         aria-label="Book Consultation"
-        class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(201,178,124,0.4)] interactive-btn focus-ring"
+        class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(201,178,124,0.4)] focus:outline-none"
       >
         <i class="fa-regular fa-calendar-check text-xl"></i>
       </a>
     </div>
 
-    <!-- Header Navigation -->
-    <header
-      id="header"
-      class="fixed w-full top-12 z-50 bg-bgMain/95 backdrop-blur-md border-b border-primary/20 transition-all duration-300"
+    <div
+      id="nav-wrapper"
+      class="fixed top-0 left-0 w-full z-[100]"
+      style="transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
     >
+      <!-- Promo Banner -->
       <div
-        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+        id="promo-banner"
+        class="h-12 bg-textDark flex items-center justify-center px-4 shadow-md"
       >
-        <div class="flex flex-1 items-center gap-2">
-          <span
-            class="font-heading font-bold text-2xl tracking-tight text-textDark"
-            >Skinique</span
-          >
-        </div>
-
-        <nav class="hidden md:flex items-center gap-8">
-          <a
-            href="./index.html"
-            class="text-md font-medium text-textMuted  interactive-link focus-ring"
-            >Home</a
-          >
-          <a
-            href="./about-us.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >About</a
-          >
-          <a
-            href="./service.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >Services</a
-          >
-          <a
-            href="./gallery.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >Gallery</a
-          >
-          <a
-            href="./before-after.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >Before & After</a
-          >
-          <a
-            href="./blogs.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >Blog</a
-          >
-          <a
-            href="./contact.html"
-            class="text-md font-medium text-textMuted interactive-link focus-ring"
-            >Contact</a
-          >
-        </nav>
-
-        <div class="flex flex-1  justify-end gap-4">
-          <button class="primary-btn">
-            <span class="btn-fill"></span>
-            <span class="btn-logo">
-              <img
-                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
-                alt=""
-              />
-            </span>
-            <span class="btn-text">Book Consultation</span>
-          </button>
-
-          <!-- Mobile Menu Button -->
-          <button
-            aria-label="Toggle Mobile Menu"
-            class="md:hidden text-textDark p-2 focus-ring interactive-btn"
-            onclick="
-              document
-                .getElementById('mobile-menu')
-                .classList.toggle('translate-x-full')
-            "
-          >
-            <i class="fa-solid fa-bars text-xl"></i>
-          </button>
-        </div>
+        <span
+          class="text-xs font-medium tracking-widest uppercase text-primary text-center"
+        >
+          20% Off on Laser Treatment – Limited Time
+        </span>
       </div>
-    </header>
+
+      <!-- Header Navigation -->
+      <header id="header" class="w-full bg-bgMain/95 backdrop-blur-md">
+        <div
+          class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+        >
+          <!-- Logo -->
+          <div class="flex flex-1 items-center gap-2">
+            <span
+              class="font-heading font-bold text-2xl tracking-tight text-textDark"
+              >Skinique</span
+            >
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex items-center gap-8">
+            <a
+              href="./index.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >Home</a
+            >
+            <a
+              href="./about-us.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >About</a
+            >
+
+            <!-- ★ Services Dropdown ★ -->
+            <div class="relative group py-6">
+              <a
+                href="./service.html"
+                class="text-md font-medium text-textMuted interactive-link focus-ring flex items-center gap-1 bg-transparent border-none cursor-pointer"
+              >
+                Services
+                <i
+                  class="fa-solid fa-chevron-down text-[10px] opacity-60 transition-transform duration-300 group-hover:rotate-180"
+                ></i>
+              </a>
+
+              <!-- L1 Dropdown Panel -->
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 z-[200]"
+              >
+                <div
+                  class="w-52 bg-bgMain border border-primary/20 rounded-card shadow-float py-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-250"
+                >
+                  <!-- Arrow -->
+                  <div
+                    class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-bgMain border-l border-t border-primary/20 rotate-45"
+                  ></div>
+
+                  <!-- Category: Skin Treatments -->
+                  <div class="relative group/cat">
+                    <div
+                      class="flex items-center justify-between px-4 py-2.5 text-xs font-medium tracking-widest uppercase text-textDark cursor-default hover:bg-primary/10 hover:text-primary transition-colors duration-150 mx-1 rounded"
+                    >
+                      Skin Treatments
+                      <i
+                        class="fa-solid fa-chevron-right text-[10px] opacity-50"
+                      ></i>
+                    </div>
+                    <!-- L2 Fly-out -->
+                    <div
+                      class="absolute top-0 left-full pl-1.5 opacity-0 invisible group-hover/cat:opacity-100 group-hover/cat:visible transition-all duration-200 z-[210] translate-x-1 group-hover/cat:translate-x-0"
+                    >
+                      <div
+                        class="w-52 bg-bgMain border border-primary/20 rounded-card shadow-float py-2"
+                      >
+                        <p
+                          class="px-4 pt-1 pb-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-primary"
+                        >
+                          Skin Treatments
+                        </p>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >HydraFacial</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Chemical Peels</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Microneedling</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Dermaplaning</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Brightening Facial</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="h-px bg-primary/15 mx-3 my-1"></div>
+
+                  <!-- Category: Laser Procedures -->
+                  <div class="relative group/cat">
+                    <div
+                      class="flex items-center justify-between px-4 py-2.5 text-xs font-medium tracking-widest uppercase text-textDark cursor-default hover:bg-primary/10 hover:text-primary transition-colors duration-150 mx-1 rounded"
+                    >
+                      Laser Procedures
+                      <i
+                        class="fa-solid fa-chevron-right text-[10px] opacity-50"
+                      ></i>
+                    </div>
+                    <div
+                      class="absolute top-0 left-full pl-1.5 opacity-0 invisible group-hover/cat:opacity-100 group-hover/cat:visible transition-all duration-200 z-[210] translate-x-1 group-hover/cat:translate-x-0"
+                    >
+                      <div
+                        class="w-52 bg-bgMain border border-primary/20 rounded-card shadow-float py-2"
+                      >
+                        <p
+                          class="px-4 pt-1 pb-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-primary"
+                        >
+                          Laser Procedures
+                        </p>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Laser Hair Removal</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Laser Skin Resurfacing</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Pigmentation Removal</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Vascular Treatments</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Tattoo Removal</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="h-px bg-primary/15 mx-3 my-1"></div>
+
+                  <!-- Category: Body Contouring -->
+                  <div class="relative group/cat">
+                    <div
+                      class="flex items-center justify-between px-4 py-2.5 text-xs font-medium tracking-widest uppercase text-textDark cursor-default hover:bg-primary/10 hover:text-primary transition-colors duration-150 mx-1 rounded"
+                    >
+                      Body Contouring
+                      <i
+                        class="fa-solid fa-chevron-right text-[10px] opacity-50"
+                      ></i>
+                    </div>
+                    <div
+                      class="absolute top-0 left-full pl-1.5 opacity-0 invisible group-hover/cat:opacity-100 group-hover/cat:visible transition-all duration-200 z-[210] translate-x-1 group-hover/cat:translate-x-0"
+                    >
+                      <div
+                        class="w-52 bg-bgMain border border-primary/20 rounded-card shadow-float py-2"
+                      >
+                        <p
+                          class="px-4 pt-1 pb-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-primary"
+                        >
+                          Body Contouring
+                        </p>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Cryolipolysis</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >RF Tightening</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Ultrasound Cavitation</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Lymphatic Drainage</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="h-px bg-primary/15 mx-3 my-1"></div>
+
+                  <!-- Category: Injectables -->
+                  <div class="relative group/cat">
+                    <div
+                      class="flex items-center justify-between px-4 py-2.5 text-xs font-medium tracking-widest uppercase text-textDark cursor-default hover:bg-primary/10 hover:text-primary transition-colors duration-150 mx-1 rounded"
+                    >
+                      Injectables
+                      <i
+                        class="fa-solid fa-chevron-right text-[10px] opacity-50"
+                      ></i>
+                    </div>
+                    <div
+                      class="absolute top-0 left-full pl-1.5 opacity-0 invisible group-hover/cat:opacity-100 group-hover/cat:visible transition-all duration-200 z-[210] translate-x-1 group-hover/cat:translate-x-0"
+                    >
+                      <div
+                        class="w-52 bg-bgMain border border-primary/20 rounded-card shadow-float py-2"
+                      >
+                        <p
+                          class="px-4 pt-1 pb-2 text-[10px] font-semibold tracking-[0.12em] uppercase text-primary"
+                        >
+                          Injectables
+                        </p>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Botox / Anti-Wrinkle</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Dermal Fillers</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >PRP Therapy</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-sm text-textMuted hover:text-primary hover:pl-5 hover:bg-primary/5 transition-all duration-150"
+                          >Mesotherapy</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="h-px bg-primary/15 mx-3 my-1"></div>
+
+                  <!-- View All -->
+                  <a
+                    href="./service.html"
+                    class="flex items-center gap-2 px-4 py-2.5 text-xs font-medium tracking-widest uppercase text-primary hover:bg-primary/5 transition-colors duration-150 mx-1 rounded"
+                  >
+                    View All Services
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- /Services -->
+
+            <a
+              href="./gallery.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >Gallery</a
+            >
+            <a
+              href="./before-after.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >Before & After</a
+            >
+            <a
+              href="./blogs.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >Blog</a
+            >
+            <a
+              href="./contact.html"
+              class="text-md font-medium text-textMuted interactive-link focus-ring"
+              >Contact</a
+            >
+          </nav>
+
+          <div class="flex flex-1 justify-end gap-4">
+            <button class="primary-btn">
+              <span class="btn-fill"></span>
+              <span class="btn-logo">
+                <img
+                  src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                  alt=""
+                />
+              </span>
+              <span class="btn-text">Book Consultation</span>
+            </button>
+            <button
+              aria-label="Toggle Mobile Menu"
+              class="lg:hidden text-textDark p-2 focus-ring interactive-btn"
+              onclick="
+                document
+                  .getElementById('mobile-menu')
+                  .classList.toggle('translate-x-full')
+              "
+            >
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
 
     <!-- Mobile Menu Drawer -->
-   <div
-  id="mobile-menu"
-  class="fixed inset-y-0  right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
->
-  <div class="flex items-center justify-between p-6 border-b border-primary/10">
-    <span class="font-heading font-bold text-2xl tracking-tight text-textDark">
-      Skinique
-    </span>
-    <button
-      aria-label="Close Mobile Menu"
-      class="text-textDark p-2 focus-ring interactive-btn hover:text-primary transition-colors"
-      onclick="
-        document
-          .getElementById('mobile-menu')
-          .classList.add('translate-x-full')
-      "
+    <div
+      id="mobile-menu"
+      class="fixed inset-y-0 right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col"
     >
-      <i class="fa-solid fa-xmark text-2xl"></i>
-    </button>
-  </div>
+      <div
+        class="flex items-center justify-between p-6 border-b border-primary/10"
+      >
+        <span
+          class="font-heading font-bold text-2xl tracking-tight text-textDark"
+          >Skinique</span
+        >
+        <button
+          aria-label="Close Mobile Menu"
+          class="text-textDark p-2 focus-ring interactive-btn hover:text-primary transition-colors"
+          onclick="
+            document
+              .getElementById('mobile-menu')
+              .classList.add('translate-x-full')
+          "
+        >
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
 
-  <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+      <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
+        <a
+          href="./index.html"
+          class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 py-1 interactive-link focus-ring"
+          >Home</a
+        >
+        <a
+          href="./about-us.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 py-1 interactive-link focus-ring"
+          >About</a
+        >
 
-    <!-- Active -->
-    <a
-      href="./index.html"
-      class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 interactive-link focus-ring"
-    >
-      Home
-    </a>
+        <!-- ★ Mobile Services Accordion ★ -->
+        <div>
+          <button
+            onclick="toggleAccordion(this)"
+            class="w-full flex items-center justify-between pl-4 py-1 text-lg font-heading font-medium text-textMuted hover:text-primary transition-colors"
+          >
+            Services
+            <i
+              class="fa-solid fa-chevron-down text-xs opacity-60 transition-transform duration-300 mr-1"
+              data-chevron
+            ></i>
+          </button>
 
-    <a
-      href="./about-us.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      About
-    </a>
+          <!-- L1: Categories -->
+          <div
+            data-accordion
+            class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+          >
+            <div class="pt-2 pb-1 pl-4 flex flex-col gap-1">
+              <!-- Sub: Skin Treatments -->
+              <div>
+                <button
+                  onclick="toggleSubcat(this)"
+                  class="w-full flex items-center justify-between px-3 py-2.5 bg-primary/5 rounded-card text-sm font-medium text-textDark hover:bg-primary/10 transition-colors"
+                >
+                  Skin Treatments
+                  <i
+                    class="fa-solid fa-chevron-down text-xs opacity-50 transition-transform duration-300"
+                    data-chevron
+                  ></i>
+                </button>
+                <div
+                  data-subcat
+                  class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+                >
+                  <div
+                    class="pt-1 pb-2 pl-3 border-l border-primary/20 ml-3 flex flex-col"
+                  >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >HydraFacial</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Chemical Peels</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Microneedling</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Dermaplaning</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Brightening Facial</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-    <a
-      href="./service.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Services
-    </a>
+              <!-- Sub: Laser Procedures -->
+              <div>
+                <button
+                  onclick="toggleSubcat(this)"
+                  class="w-full flex items-center justify-between px-3 py-2.5 bg-primary/5 rounded-card text-sm font-medium text-textDark hover:bg-primary/10 transition-colors"
+                >
+                  Laser Procedures
+                  <i
+                    class="fa-solid fa-chevron-down text-xs opacity-50 transition-transform duration-300"
+                    data-chevron
+                  ></i>
+                </button>
+                <div
+                  data-subcat
+                  class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+                >
+                  <div
+                    class="pt-1 pb-2 pl-3 border-l border-primary/20 ml-3 flex flex-col"
+                  >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Laser Hair Removal</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Laser Skin Resurfacing</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Pigmentation Removal</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Vascular Treatments</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Tattoo Removal</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-    <a
-      href="./gallery.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Gallery
-    </a>
+              <!-- Sub: Body Contouring -->
+              <div>
+                <button
+                  onclick="toggleSubcat(this)"
+                  class="w-full flex items-center justify-between px-3 py-2.5 bg-primary/5 rounded-card text-sm font-medium text-textDark hover:bg-primary/10 transition-colors"
+                >
+                  Body Contouring
+                  <i
+                    class="fa-solid fa-chevron-down text-xs opacity-50 transition-transform duration-300"
+                    data-chevron
+                  ></i>
+                </button>
+                <div
+                  data-subcat
+                  class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+                >
+                  <div
+                    class="pt-1 pb-2 pl-3 border-l border-primary/20 ml-3 flex flex-col"
+                  >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Cryolipolysis</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >RF Tightening</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Ultrasound Cavitation</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Lymphatic Drainage</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-    <a
-      href="./before-after.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Before & After
-    </a>
+              <!-- Sub: Injectables -->
+              <div>
+                <button
+                  onclick="toggleSubcat(this)"
+                  class="w-full flex items-center justify-between px-3 py-2.5 bg-primary/5 rounded-card text-sm font-medium text-textDark hover:bg-primary/10 transition-colors"
+                >
+                  Injectables
+                  <i
+                    class="fa-solid fa-chevron-down text-xs opacity-50 transition-transform duration-300"
+                    data-chevron
+                  ></i>
+                </button>
+                <div
+                  data-subcat
+                  class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+                >
+                  <div
+                    class="pt-1 pb-2 pl-3 border-l border-primary/20 ml-3 flex flex-col"
+                  >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Botox / Anti-Wrinkle</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Dermal Fillers</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >PRP Therapy</a
+                    >
+                    <a
+                      href="#"
+                      class="py-1.5 text-sm text-textMuted hover:text-primary transition-colors"
+                      >Mesotherapy</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-    <a
-      href="./blogs.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Blog
-    </a>
+              <!-- View All -->
+              <a
+                href="./service.html"
+                class="flex items-center gap-2 px-3 py-2.5 mt-1 text-xs font-medium tracking-widest uppercase text-primary border border-primary/30 rounded-card hover:bg-primary/5 transition-colors"
+              >
+                View All Services
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /Services -->
 
-    <a
-      href="./contact.html"
-      class="text-lg font-heading font-medium text-textMuted pl-4 interactive-link focus-ring"
-    >
-      Contact
-    </a>
+        <a
+          href="./gallery.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 py-1 interactive-link focus-ring"
+          >Gallery</a
+        >
+        <a
+          href="./before-after.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 py-1 interactive-link focus-ring"
+          >Before & After</a
+        >
+        <a
+          href="./blogs.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 py-1 interactive-link focus-ring"
+          >Blog</a
+        >
+        <a
+          href="./contact.html"
+          class="text-lg font-heading font-medium text-textMuted pl-4 py-1 interactive-link focus-ring"
+          >Contact</a
+        >
 
-    <!-- CTA -->
-    <div class="mt-8 pt-8 border-t border-primary/10">
-       <button class="primary-btn">
+        <div class="mt-8 pt-8 border-t border-primary/10">
+          <a class="primary-btn w-full justify-center">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -314,213 +777,351 @@
               />
             </span>
             <span class="btn-text">Book Consultation</span>
-          </button>
+          </a>
+        </div>
+      </nav>
     </div>
 
-  </nav>
-</div>
-
-   <main id="main-content" class="pt-[128px] transition-all duration-300">
-
-       <section id="contact-hero" class="py-32 bg-bgMain">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="w-full">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-primary/30 rounded-full bg-bgMain/80 backdrop-blur-md shadow-sm"
-      >
-        <span
-          class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
-        ></span>
-        <span
-          class="text-xs font-bold tracking-widest uppercase text-textDark"
-          >Get In Touch</span
-        >
-      </div>
-
-      <h1
-        class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
-      >
-        Contact <br />
-        Skinique
-      </h1>
-
-      <p
-        class="text-xl text-textMuted leading-relaxed max-w-2xl font-normal"
-      >
-        Book your consultation or reach out to our team for personalized guidance on skin, hair, and laser treatments tailored to your needs.
-      </p>
-    </div>
-  </div>
-</section>
-       
-
-        <!-- Editorial Asymmetrical Contact Layout -->
-        <section id="editorial-contact" id="about-hero" class="py-32 bg-bgSection">
-            <div class="max-w-7xl mx-auto px-6 ">
-                <!-- Large scale editorial grid: Contact Info Left, Form Right -->
-                <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 relative items-start">
-                    
-                    <!-- Left Column: Info & Map (40% width for sophisticated balance) -->
-                    <div class="w-full lg:w-[40%] z-20 flex flex-col lg:sticky lg:top-32">
-                        
-                        <!-- Minimalist Contact Info Cards -->
-                        <div class="flex flex-col gap-10 mb-10">
-                            <div>
-                                <h3 class="font-heading text-2xl font-bold text-textDark mb-6 tracking-tight">Visit Us</h3>
-                                <p class="text-lg text-textMuted font-medium leading-relaxed mb-6">
-                                    101, The Signature Building,<br>
-                                    Palm Beach Road, Vashi,<br>
-                                    Navi Mumbai, MH 400703
-                                </p>
-                                <a href="#" class="text-sm font-bold text-textDark border-b border-textDark hover:text-primary hover:border-primary pb-1 transition-all inline-flex items-center gap-2">
-                                    Get Directions <i class="fa-solid fa-arrow-right text-xs"></i>
-                                </a>
-                            </div>
-
-                            <div class="h-px w-full bg-primary/10"></div>
-
-                            <div>
-                                <h3 class="font-heading text-xl font-bold text-textDark mb-4 tracking-tight">Contact &amp; Hours</h3>
-                                <a href="tel:7021210819" class="block font-heading text-2xl font-bold text-textDark hover:text-primary transition-colors mb-3">
-                                    7021210819
-                                </a>
-                                <p class="text-sm text-textMuted font-medium leading-relaxed">
-                                    Mon - Sat: 3:00 PM - 7:00 PM<br>
-                                    Sunday: Closed
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Map Block (Full bleed style within its container) -->
-                        <div class="h-[240px] w-full rounded-card overflow-hidden border border-primary/10 shadow-sm img-placeholder group relative">
-                            <img class="w-full h-full object-cover grayscale-[0.8] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8eb25613c8-4f96f37b3048449c019f.png" alt="High quality, premium, minimalist grayscale map view of Vashi Navi Mumbai area, abstract geometric style, subtle beige and gray tones">
-                            
-                            <!-- Minimalist Map Overlay -->
-                            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-custom border border-primary/20 shadow-sm flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                                <div>
-                                    <p class="text-[10px] font-bold tracking-widest uppercase text-textMuted mb-0.5">Location</p>
-                                    <p class="text-xs font-bold text-textDark">Skinique Clinic, Vashi</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Right Column: High-End Form (60% width) -->
-                    <div class="w-full lg:w-[60%] z-30">
-                        <div id="appointment-form" class="bg-white p-8 md:p-12 rounded-medium border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative">
-                            
-                            <div class="mb-10">
-                                <h2 class="font-heading text-3xl md:text-[32px] font-bold text-textDark mb-3 tracking-tight">Request Consultation</h2>
-                                <p class="text-textMuted text-base font-medium leading-relaxed">Please fill out the form below to secure your preferred time with Dr. Kajal Komalan.</p>
-                            </div>
-
-                            <form action="#" method="POST" class="space-y-6">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="editFullName" class="block text-sm font-bold text-textDark mb-2">Full Name <span class="text-primary">*</span></label>
-                                        <input type="text" id="editFullName" name="editFullName" required="" placeholder="Enter your full name" class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200">
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="editContact" class="block text-sm font-bold text-textDark mb-2">Email or Phone <span class="text-primary">*</span></label>
-                                        <input type="text" id="editContact" name="editContact" required="" placeholder="Enter your contact details" class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200">
-                                    </div>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="editConcern" class="block text-sm font-bold text-textDark mb-2">Primary Concern <span class="text-primary">*</span></label>
-                                        <div class="relative">
-                                            <select id="editConcern" name="editConcern" required="" class="block w-full appearance-none bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 cursor-pointer">
-                                                <option value="" disabled="" selected="">Select concern</option>
-                                                <option value="skin">Skin Treatments &amp; Acne</option>
-                                                <option value="hair">Hair Loss &amp; Restoration</option>
-                                                <option value="aesthetic">Aesthetic &amp; Anti-Aging</option>
-                                                <option value="other">General Consultation</option>
-                                            </select>
-                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-textDark">
-                                                <i class="fa-solid fa-chevron-down text-xs"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <label for="editDate" class="block text-sm font-bold text-textDark mb-2">Preferred Date</label>
-                                        <input type="date" id="editDate" name="editDate" class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 cursor-pointer">
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label for="editMessage" class="block text-sm font-bold text-textDark mb-2">Brief Message</label>
-                                    <textarea id="editMessage" name="editMessage" rows="4" placeholder="Write your message..." class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 resize-none"></textarea>
-                                </div>
-
-                                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
-
-                                    <button class="  primary-btn btn-variant-two">
-            <span class="btn-fill"></span>
-            <span class="btn-logo">
-              <img
-                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
-                alt=""
-              />
-            </span>
-            <span class="btn-text">Submit Request</span>
-          </button>
-                                   
-                                    <p class="text-xs text-textMuted text-center sm:text-right max-w-[250px]">
-                                        By submitting, you agree to our privacy policy.
-                                    </p>
-
-
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
+    <main id="main-content" class="pt-[128px] transition-all duration-300">
+      <section id="contact-hero" class="py-32 bg-bgMain">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="w-full">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-primary/30 rounded-full bg-bgMain/80 backdrop-blur-md shadow-sm"
+            >
+              <span
+                class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
+              ></span>
+              <span
+                class="text-xs font-bold tracking-widest uppercase text-textDark"
+                >Get In Touch</span
+              >
             </div>
-        </section>
 
+            <h1
+              class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
+            >
+              Contact <br />
+              Skinique
+            </h1>
 
-         <!-- CTA Section -->
-        <section class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20">
-            <div class="bg-textDark text-white rounded-2xl overflow-hidden relative">
-                <div class="absolute inset-0 opacity-20">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3382df8161-88e7a12e2fe2adcaa710.png" />
+            <p
+              class="text-xl text-textMuted leading-relaxed max-w-2xl font-normal"
+            >
+              Book your consultation or reach out to our team for personalized
+              guidance on skin, hair, and laser treatments tailored to your
+              needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Asymmetrical Contact Layout -->
+      <section
+        id="editorial-contact"
+        id="about-hero"
+        class="py-32 bg-bgSection"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Large scale editorial grid: Contact Info Left, Form Right -->
+          <div
+            class="flex flex-col lg:flex-row gap-12 lg:gap-24 relative items-start"
+          >
+            <!-- Left Column: Info & Map (40% width for sophisticated balance) -->
+            <div
+              class="w-full lg:w-[40%] z-20 flex flex-col lg:sticky lg:top-32"
+            >
+              <!-- Minimalist Contact Info Cards -->
+              <div class="flex flex-col gap-10 mb-10">
+                <div>
+                  <h3
+                    class="font-heading text-2xl font-bold text-textDark mb-6 tracking-tight"
+                  >
+                    Visit Us
+                  </h3>
+                  <p
+                    class="text-lg text-textMuted font-medium leading-relaxed mb-6"
+                  >
+                    101, The Signature Building,<br />
+                    Palm Beach Road, Vashi,<br />
+                    Navi Mumbai, MH 400703
+                  </p>
+                  <a
+                    href="#"
+                    class="text-sm font-bold text-textDark border-b border-textDark hover:text-primary hover:border-primary pb-1 transition-all inline-flex items-center gap-2"
+                  >
+                    Get Directions
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                  </a>
                 </div>
 
-                <div class="relative z-10 px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-3xl mx-auto">
-                    <span class="text-primary text-xs font-semibold tracking-widest uppercase mb-6 block">
-                        Ready to start?
-                    </span>
+                <div class="h-px w-full bg-primary/10"></div>
 
-                    <h2 class="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8">
-                        Begin Your Transformation
-                    </h2>
+                <div>
+                  <h3
+                    class="font-heading text-xl font-bold text-textDark mb-4 tracking-tight"
+                  >
+                    Contact &amp; Hours
+                  </h3>
+                  <a
+                    href="tel:7021210819"
+                    class="block font-heading text-2xl font-bold text-textDark hover:text-primary transition-colors mb-3"
+                  >
+                    7021210819
+                  </a>
+                  <p class="text-sm text-textMuted font-medium leading-relaxed">
+                    Mon - Sat: 3:00 PM - 7:00 PM<br />
+                    Sunday: Closed
+                  </p>
+                </div>
+              </div>
 
-                    <p class="text-white/80 text-lg md:text-xl leading-relaxed font-light mb-12">
-                        Schedule a comprehensive consultation to discuss if Advanced Laser Resurfacing is the right protocol for your unique skin goals.
+              <!-- Map Block (Full bleed style within its container) -->
+              <div
+                class="h-[240px] w-full rounded-card overflow-hidden border border-primary/10 shadow-sm img-placeholder group relative"
+              >
+                <img
+                  class="w-full h-full object-cover grayscale-[0.8] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8eb25613c8-4f96f37b3048449c019f.png"
+                  alt="High quality, premium, minimalist grayscale map view of Vashi Navi Mumbai area, abstract geometric style, subtle beige and gray tones"
+                />
+
+                <!-- Minimalist Map Overlay -->
+                <div
+                  class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-custom border border-primary/20 shadow-sm flex items-center gap-3"
+                >
+                  <div
+                    class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                  ></div>
+                  <div>
+                    <p
+                      class="text-[10px] font-bold tracking-widest uppercase text-textMuted mb-0.5"
+                    >
+                      Location
                     </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-white text-textDark px-10 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-soft text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark">
-                            Book Consultation
-                        </button>
-
-                        <button class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors text-sm tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-textDark">
-                            View Pricing
-                        </button>
-                    </div>
+                    <p class="text-xs font-bold text-textDark">
+                      Skinique Clinic, Vashi
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
 
+            <!-- Right Column: High-End Form (60% width) -->
+            <div class="w-full lg:w-[60%] z-30">
+              <div
+                id="appointment-form"
+                class="bg-white p-8 md:p-12 rounded-medium border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] relative"
+              >
+                <div class="mb-10">
+                  <h2
+                    class="font-heading text-3xl md:text-[32px] font-bold text-textDark mb-3 tracking-tight"
+                  >
+                    Request Consultation
+                  </h2>
+                  <p
+                    class="text-textMuted text-base font-medium leading-relaxed"
+                  >
+                    Please fill out the form below to secure your preferred time
+                    with Dr. Ayushi Sharma.
+                  </p>
+                </div>
+
+                <form action="#" method="POST" class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        for="editFullName"
+                        class="block text-sm font-bold text-textDark mb-2"
+                        >Full Name <span class="text-primary">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="editFullName"
+                        name="editFullName"
+                        required=""
+                        placeholder="Enter your full name"
+                        class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        for="editContact"
+                        class="block text-sm font-bold text-textDark mb-2"
+                        >Email or Phone
+                        <span class="text-primary">*</span></label
+                      >
+                      <input
+                        type="text"
+                        id="editContact"
+                        name="editContact"
+                        required=""
+                        placeholder="Enter your contact details"
+                        class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        for="editConcern"
+                        class="block text-sm font-bold text-textDark mb-2"
+                        >Primary Concern
+                        <span class="text-primary">*</span></label
+                      >
+                      <div class="relative">
+                        <select
+                          id="editConcern"
+                          name="editConcern"
+                          required=""
+                          class="block w-full appearance-none bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 cursor-pointer"
+                        >
+                          <option value="" disabled="" selected="">
+                            Select concern
+                          </option>
+                          <option value="skin">
+                            Skin Treatments &amp; Acne
+                          </option>
+                          <option value="hair">
+                            Hair Loss &amp; Restoration
+                          </option>
+                          <option value="aesthetic">
+                            Aesthetic &amp; Anti-Aging
+                          </option>
+                          <option value="other">General Consultation</option>
+                        </select>
+                        <div
+                          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-textDark"
+                        >
+                          <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        for="editDate"
+                        class="block text-sm font-bold text-textDark mb-2"
+                        >Preferred Date</label
+                      >
+                      <input
+                        type="date"
+                        id="editDate"
+                        name="editDate"
+                        class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 cursor-pointer"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      for="editMessage"
+                      class="block text-sm font-bold text-textDark mb-2"
+                      >Brief Message</label
+                    >
+                    <textarea
+                      id="editMessage"
+                      name="editMessage"
+                      rows="4"
+                      placeholder="Write your message..."
+                      class="block w-full bg-white border border-primary/20 rounded-[8px] px-4 py-3 text-base text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 resize-none"
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-6"
+                  >
+                    <button class="primary-btn btn-variant-two">
+                      <span class="btn-fill"></span>
+                      <span class="btn-logo">
+                        <img
+                          src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                          alt=""
+                        />
+                      </span>
+                      <span class="btn-text">Submit Request</span>
+                    </button>
+
+                    <p
+                      class="text-xs text-textMuted text-center sm:text-right max-w-[250px]"
+                    >
+                      By submitting, you agree to our privacy policy.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20 stagger-enter"
+      >
+        <div
+          class="bg-textDark text-white rounded-[32px] overflow-hidden relative"
+        >
+          <div class="absolute inset-0 opacity-20">
+            <img
+              class="w-full h-full object-cover"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3382df8161-88e7a12e2fe2adcaa710.png"
+            />
+          </div>
+
+          <div
+            class="relative z-10 px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-3xl mx-auto"
+          >
+            <span
+              class="text-primary text-xs font-semibold tracking-widest uppercase mb-6 block"
+            >
+              Ready to start?
+            </span>
+
+            <h2
+              class="font-heading text-5xl md:text-6xl lg:text-[70px] font-bold tracking-tight leading-[1.1] mb-8"
+            >
+              Begin Your Transformation
+            </h2>
+
+            <p
+              class="text-white/80 text-lg md:text-xl leading-relaxed font-light mb-12"
+            >
+              Schedule a comprehensive consultation to discuss if Advanced Laser
+              Resurfacing is the right protocol for your unique skin goals.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="primary-btn btn-variant-two">
+                <span class="btn-fill"></span>
+                <span class="btn-logo">
+                  <img
+                    src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                    alt=""
+                  />
+                </span>
+                <span class="btn-text">Book an Appointment</span>
+              </button>
+
+              <button class="primary-btn">
+                <span class="btn-fill"></span>
+                <span class="btn-logo">
+                  <img
+                    src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                    alt=""
+                  />
+                </span>
+                <span class="btn-text">Our Services</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-<!-- Footer -->
+   <!-- Footer -->
     <footer id="footer" class="bg-bgMain py-10 border-t border-primary/20">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
@@ -534,31 +1135,31 @@
               Premium dermatology and aesthetic clinic dedicated to revealing
               your natural beauty through science-backed treatments.
             </p>
-           <div class="flex gap-4">
-  <a
-    href="#"
-    aria-label="Instagram"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-instagram text-lg"></i>
-  </a>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
 
-  <a
-    href="#"
-    aria-label="Facebook"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-facebook-f text-lg"></i>
-  </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-facebook-f text-lg"></i>
+              </a>
 
-  <a
-    href="#"
-    aria-label="Twitter"
-    class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-  >
-    <i class="fa-brands fa-twitter text-lg"></i>
-  </a>
-</div>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-bgSection text-textDark hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <i class="fa-brands fa-twitter text-lg"></i>
+              </a>
+            </div>
           </div>
 
           <div class="md:col-span-2">
@@ -686,6 +1287,7 @@
         </div>
       </div>
     </footer>
+    <!-- Bottom Bar -->
     <div
       id="footer"
       class="w-full border-t border-skinique-container py-4 px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-4 bg-white/50"
@@ -713,10 +1315,70 @@
     </div>
 
     <script>
-        function closePromo() {
-            document.getElementById('promo-banner').style.transform = 'translateY(-100%)';
-        }
+      function closePromo() {
+        document.getElementById("promo-banner").style.transform =
+          "translateY(-100%)";
+      }
     </script>
 
+     <script>
+      /* Mobile Level-1: Services accordion */
+      function toggleAccordion(btn) {
+        const panel = btn.nextElementSibling;
+        const chevron = btn.querySelector("[data-chevron]");
+        const isOpen = panel.style.maxHeight && panel.style.maxHeight !== "0px";
+        panel.style.maxHeight = isOpen ? "0px" : panel.scrollHeight + "px";
+        chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      }
 
-</body></html>
+      /* Mobile Level-2: sub-category accordion (one open at a time) */
+      function toggleSubcat(btn) {
+        const panel = btn.nextElementSibling;
+        const chevron = btn.querySelector("[data-chevron]");
+        const isOpen = panel.style.maxHeight && panel.style.maxHeight !== "0px";
+
+        // Close all sibling sub-cats
+        btn
+          .closest("nav")
+          .querySelectorAll("[data-subcat]")
+          .forEach((el) => {
+            el.style.maxHeight = "0px";
+            const ch =
+              el.previousElementSibling?.querySelector("[data-chevron]");
+            if (ch) ch.style.transform = "rotate(0deg)";
+          });
+
+        if (!isOpen) {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          chevron.style.transform = "rotate(180deg)";
+        }
+      }
+    </script>
+
+     <script>
+      const navWrapper = document.getElementById("nav-wrapper");
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            const scrollingDown = currentScrollY > lastScrollY;
+            const pastThreshold = currentScrollY > 20;
+
+            if (scrollingDown && pastThreshold) {
+              navWrapper.style.transform = "translateY(-100%)";
+            } else {
+              navWrapper.style.transform = "translateY(0)";
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    </script>
+  </body>
+</html>
