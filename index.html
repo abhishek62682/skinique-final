@@ -265,20 +265,7 @@
     </script>
   </head>
   <body>
-    <!-- Top Promotional Banner -->
-    <div
-      id="promo-banner"
-      class="fixed top-0 left-0 w-full z-[100] h-12 bg-textDark flex items-center justify-center px-4 shadow-md transition-transform duration-300"
-    >
-      <div class="flex items-center justify-center w-full max-w-7xl mx-auto">
-        <div class="flex items-center justify-center gap-4 flex-1">
-          <span
-            class="text-xs md:text-xs font-medium tracking-widest uppercase text-[#C9B27C] text-center"
-            >20% Off on Laser Treatment – Limited Time</span
-          >
-        </div>
-      </div>
-    </div>
+   
 
     <!-- Mobile Sticky FAB -->
     <div class="md:hidden fixed bottom-6 right-6 z-[70]">
@@ -291,14 +278,22 @@
       </a>
     </div>
 
+   <div id="nav-wrapper" class="fixed top-0 left-0 w-full z-[100]" style="transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+       <!-- Promo Banner -->
+  <div id="promo-banner" class="h-12 bg-textDark flex items-center justify-center px-4 shadow-md">
+    <div class="flex items-center justify-center w-full max-w-7xl mx-auto">
+      <div class="flex items-center justify-center gap-4 flex-1">
+        <span class="text-xs md:text-xs font-medium tracking-widest uppercase text-[#C9B27C] text-center">
+          20% Off on Laser Treatment – Limited Time
+        </span>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Header Navigation -->
-    <header
-      id="header"
-      class="fixed w-full top-12 z-50 bg-bgMain/95 backdrop-blur-md border-b border-primary/20 transition-all duration-300"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
-      >
+   <header id="header" class="w-full bg-bgMain/95 backdrop-blur-md ">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div class="flex flex-1 items-center gap-2">
           <span
             class="font-heading font-bold text-2xl tracking-tight text-textDark"
@@ -306,7 +301,7 @@
           >
         </div>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-8">
           <a
             href="./index.html"
             class="text-md font-medium text-textMuted interactive-link focus-ring"
@@ -345,7 +340,7 @@
         </nav>
 
         <div class="flex flex-1 justify-end gap-4">
-          <button class=" hidden md:block primary-btn">
+          <button class="  primary-btn">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -359,7 +354,7 @@
           <!-- Mobile Menu Button -->
           <button
             aria-label="Toggle Mobile Menu"
-            class="md:hidden text-textDark p-2 focus-ring interactive-btn"
+            class="lg:hidden text-textDark p-2 focus-ring interactive-btn"
             onclick="
               document
                 .getElementById('mobile-menu')
@@ -371,11 +366,12 @@
         </div>
       </div>
     </header>
+    </div>
 
     <!-- Mobile Menu Drawer -->
     <div
       id="mobile-menu"
-      class="fixed inset-y-0 right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
+      class="fixed inset-y-0 right-0 z-[100] w-full max-w-sm bg-bgMain shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col"
     >
       <div
         class="flex items-center justify-between p-6 border-b border-primary/10"
@@ -451,7 +447,7 @@
 
         <!-- CTA -->
         <div class="mt-8 pt-8 border-t border-primary/10">
-          <button class="primary-btn">
+          <a class="primary-btn">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -460,16 +456,16 @@
               />
             </span>
             <span class="btn-text">Book Consultation</span>
-          </button>
+          </a>
         </div>
       </nav>
     </div>
 
     <main id="main-content" class="pt-[128px] transition-all duration-300">
       <!-- Hero Section -->
-      <section id="hero" class="md:px-20">
+      <section id="hero" class="max-w-7xl mt-[20px] mx-auto">
         <div
-          class="relative md:rounded-[50px] h-[800px] w-full flex items-center justify-center text-center overflow-hidden"
+          class="relative lg:rounded-[50px] h-[800px] w-full flex items-center justify-center text-center overflow-hidden"
         >
           <div class="absolute bg-iii inset-0 z-0 bg-bgMain img-placeholder">
             <img
@@ -562,13 +558,25 @@
                 consultation to address your unique concerns and goals using
                 FDA-approved technology and evidence-based protocols.
               </p>
-              <a
+              <!-- <a
                 href="#"
                 aria-label="Discover Our Philosophy"
                 class="inline-flex items-center justify-center px-8 py-3 text-sm font-bold tracking-widest uppercase text-textDark border-2 border-textDark hover:bg-textDark hover:text-white rounded-custom interactive-btn focus-ring"
               >
                 Discover Our Philosophy
-              </a>
+              </a> -->
+
+
+              <a class="primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Discover Our Philosophy</span>
+          </a>
             </div>
             <div class="grid grid-cols-2 gap-4">
               <div
@@ -635,20 +643,20 @@
               ></div>
               <div class="absolute inset-0 p-8 flex flex-col justify-end">
                 <h3
-                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight "
                 >
                   Skin Treatments
                 </h3>
                 <p
-                  class="text-white/90 mb-6 font-normal opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100"
+                  class="text-white/90 mb-6 font-normal  transform "
                 >
                   Advanced solutions for acne, pigmentation, and overall skin
                   health.
                 </p>
                 <a
-                  href="#"
+                  href="./service.html"
                   aria-label="Explore Skin Treatments"
-                  class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-textDark transition-colors w-fit rounded-custom opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 duration-300 delay-200 focus-ring"
+                  class="inline-flex items-center justify-center px-6 py-3 border-[1px] border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-bgSection hover:text-textDark transition-colors w-fit rounded-[36px]  duration-300  "
                 >
                   Explore Skin
                 </a>
@@ -672,23 +680,25 @@
               ></div>
               <div class="absolute inset-0 p-8 flex flex-col justify-end">
                 <h3
-                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight "
                 >
                   Hair Therapy
                 </h3>
                 <p
-                  class="text-white/90 mb-6 font-normal opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100"
+                  class="text-white/90 mb-6 font-normal o"
                 >
                   Targeted protocols for hair loss, thinning, and scalp
                   rejuvenation.
                 </p>
-                <a
-                  href="#"
-                  aria-label="Explore Hair Treatments"
-                  class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-textDark transition-colors w-fit rounded-custom opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 duration-300 delay-200 focus-ring"
+
+                 <a
+                  href="./service.html"
+                  aria-label="Explore Skin Treatments"
+                  class="inline-flex items-center justify-center px-6 py-3 border-[1px] border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-bgSection hover:text-textDark transition-colors w-fit rounded-[36px]  duration-300  "
                 >
                   Explore Hair
                 </a>
+               
               </div>
             </div>
 
@@ -709,22 +719,24 @@
               ></div>
               <div class="absolute inset-0 p-8 flex flex-col justify-end">
                 <h3
-                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  class="font-heading text-3xl font-bold mb-3 text-white uppercase tracking-tight "
                 >
                   Aesthetics
                 </h3>
                 <p
-                  class="text-white/90 mb-6 font-normal opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100"
+                  class="text-white/90 mb-6 font-normal  "
                 >
                   Refined enhancements including Botox, fillers, and anti-aging.
                 </p>
-                <a
-                  href="#"
-                  aria-label="Explore Aesthetic Treatments"
-                  class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-textDark transition-colors w-fit rounded-custom opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 duration-300 delay-200 focus-ring"
+
+                 <a
+                  href="./service.html"
+                  aria-label="Explore Skin Treatments"
+                  class="inline-flex items-center justify-center px-6 py-3 border-[1px] border-white text-white text-xs font-bold tracking-widest uppercase hover:bg-bgSection hover:text-textDark transition-colors w-fit rounded-[36px]  duration-300  "
                 >
-                  Explore Aesthetics
+                   Explore Aesthetics
                 </a>
+                
               </div>
             </div>
           </div>
@@ -806,13 +818,24 @@
                 </div>
               </div>
 
-              <a
+               <button class=" hidden md:block primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text"> Read Full Profile</span>
+          </button>
+
+              <!-- <a
                 href="#"
                 aria-label="Read Dr. Ananya Sharma's Full Profile"
                 class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold tracking-widest uppercase text-white bg-primary rounded-custom interactive-btn shadow-md focus-ring"
               >
                 Read Full Profile
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -1072,8 +1095,8 @@
           </div>
 
           <a
-            href="#"
-            class="inline-flex items-center justify-center px-10 py-4 text-sm font-bold tracking-widest uppercase text-textDark border-2 border-textDark hover:bg-textDark hover:text-white rounded-custom transition-all duration-300 hover:scale-105 bg-transparent"
+            href="./before-after.html"
+            class="inline-flex items-center justify-center px-10 py-4 text-sm font-bold tracking-widest uppercase text-textDark border border-textDark hover:bg-textDark hover:text-white rounded-[50px] transition-all duration-300 hover:scale-105 bg-transparent"
           >
             View All Results
           </a>
@@ -1559,17 +1582,29 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                class="bg-white text-textDark px-10 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-soft text-sm tracking-widest uppercase"
-              >
-                Book Consultation
-              </button>
 
-              <button
-                class="bg-transparent border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors text-sm tracking-widest uppercase"
-              >
-                View Pricing
-              </button>
+               <button class="  primary-btn btn-variant-two">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Book an Appointment</span>
+          </button>
+             
+
+              <button class="  primary-btn">
+            <span class="btn-fill"></span>
+            <span class="btn-logo">
+              <img
+                src="https://framerusercontent.com/images/O1tnocyvBNm6Zym1OQLf7n6GMk.svg?width=13&height=13"
+                alt=""
+              />
+            </span>
+            <span class="btn-text">Our Services</span>
+          </button>
             </div>
           </div>
         </div>
@@ -1767,5 +1802,33 @@
         >
       </div>
     </div>
+
+
+
+  <script>
+  const navWrapper = document.getElementById('nav-wrapper');
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+        const pastThreshold = currentScrollY > 20;
+
+        if (scrollingDown && pastThreshold) {
+          navWrapper.style.transform = 'translateY(-100%)';
+        } else {
+          navWrapper.style.transform = 'translateY(0)';
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+</script>
   </body>
 </html>

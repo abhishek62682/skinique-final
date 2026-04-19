@@ -8,22 +8,22 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  color: rgb(122, 104, 93);
+  color:#000;
   background-color: #f7ecdf;
-  padding: 10px 20px 10px 10px;
+  padding: 14px 24px 14px 14px;
   border: none;
-  border-radius: 62px;
+  border-radius: 100px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 10px !important;
   overflow: hidden;
   z-index: 1;
 }
 
 .btn-fill {
   position: absolute;
-  left: 10px;
+  left: 14px;
   width: 24px;
   height: 24px;
   background-color: #fff;
@@ -65,4 +65,11 @@
 .primary-btn:hover .btn-text,
 .primary-btn:hover .btn-logo {
   color: #633b2c;
+}
+
+
+
+.btn-variant-two {
+  background-color: #C9B27C;
+  color: #fff;
 }
