@@ -101,16 +101,7 @@
 </head>
 <body class="m-0 p-0">
 
-    <!-- Mobile Sticky FAB -->
-    <div class="md:hidden fixed bottom-6 right-6 z-[70]">
-      <a
-        href="#booking"
-        aria-label="Book Consultation"
-        class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(201,178,124,0.4)] focus:outline-none"
-      >
-        <i class="fa-regular fa-calendar-check text-xl"></i>
-      </a>
-    </div>
+   
 
     <div
       id="nav-wrapper"
@@ -468,7 +459,7 @@
       <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
         <a
           href="./index.html"
-          class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 py-1 interactive-link focus-ring"
+          class="text-lg font-heading font-medium text-textMuted  pl-4 py-1 interactive-link focus-ring"
           >Home</a
         >
         <a
@@ -712,8 +703,8 @@
           >Contact</a
         >
 
-        <div class="mt-8 pt-8 border-t border-primary/10">
-          <a class="primary-btn w-full justify-center">
+        <div class="mt-8  border-t border-primary/10">
+          <a class="primary-btn  justify-center">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -748,7 +739,7 @@
       </div>
 
       <h1
-        class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
+        class="font-heading text-[8.5vw] sm:text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase "
       >
         Skin, Hair <br />
         & Laser Care
@@ -763,207 +754,225 @@
   </div>
 </section>
 
-        <!-- Services Catalog -->
-        <section id="services-catalog" class="py-24 bg-bgSection">
-            <div class="max-w-7xl mx-auto px-6">
-                
-                <!-- Skin Treatments -->
-                <div class="mb-24" id="category-skin">
-                    <div class="mb-12 border-b border-primary/20 pb-4">
-                        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Skin Treatments</h2>
-                        <p class="text-textMuted mt-2 font-normal">Advanced protocols for radiant, healthy skin.</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Card 1 -->
-                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                           <div>
-                             <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-droplet text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Acne Management</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive medical approach to clear active breakouts and prevent future occurrences through targeted therapies. 
-                            </p>
-                           </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹2,500</span>
-                                <a href="#" aria-label="Learn more about Acne Management" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
+       <!-- Services Catalog -->
+<section id="services-catalog" class="py-24 bg-bgSection">
+  <div class="max-w-7xl mx-auto px-6">
 
-                        <!-- Card 2 -->
-                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div >
+    <!-- Skin Treatments -->
+    <div class="mb-24" id="category-skin">
+      <div class="mb-12 border-b border-primary/20 pb-4">
+        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Skin Treatments</h2>
+        <p class="text-textMuted mt-2 font-normal">Advanced protocols for radiant, healthy skin.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-sun text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Pigmentation Correction</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Advanced laser and topical treatments to address melasma, sun spots, and uneven skin tone for a luminous complexion.</p>
-                              
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹4,000</span>
-                                <a href="#" aria-label="Learn more about Pigmentation Correction" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="">
-                              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-leaf text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Chemical Peels</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Customized medical-grade exfoliations to reveal fresher, smoother skin and address fine lines and dullness.</p>
-                            </div>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹3,000</span>
-                                <a href="#" aria-label="Learn more about Chemical Peels" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-sparkles text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Skin Brightening</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Intravenous therapies and advanced facials designed to boost hydration and impart a natural, healthy glow.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹5,000</span>
-                                <a href="#" aria-label="Learn more about Skin Brightening" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Scar & Acne Marks</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Fractional lasers and micro-needling protocols to significantly reduce the appearance of textural irregularities and scars.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹6,000</span>
-                                <a href="#" aria-label="Learn more about Scar & Acne Marks" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hair Treatments -->
-                <div class="mb-24" id="category-hair">
-                    <div class="mb-12 border-b border-primary/20 pb-4">
-                        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Hair Treatments</h2>
-                        <p class="text-textMuted mt-2 font-normal">Restorative solutions for hair and scalp vitality.</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Card 1 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-user-hair text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Hair Loss Therapy</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive diagnostic evaluation and medical management for various forms of alopecia and thinning.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Consultation Required</span>
-                                <a href="#" aria-label="Learn more about Hair Loss Therapy" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-vial text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">PRP Therapy</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Platelet-Rich Plasma treatments utilizing your body's own growth factors to stimulate dormant hair follicles.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹7,500</span>
-                                <a href="#" aria-label="Learn more about PRP Therapy" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-head-side text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Scalp Rejuvenation</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Deep cleansing and nourishing protocols to address dandruff, sensitivity, and create an optimal environment for growth.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹3,500</span>
-                                <a href="#" aria-label="Learn more about Scalp Rejuvenation" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aesthetic Treatments -->
-                <div class="mb-12" id="category-aesthetic">
-                    <div class="mb-12 border-b border-primary/20 pb-4">
-                        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Aesthetic Treatment</h2>
-                        <p class="text-textMuted mt-2 font-normal">Refined enhancements for timeless elegance.</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Card 1 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-syringe text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Botox & Fillers</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Expertly administered injectables to smooth dynamic wrinkles and restore lost facial volume with natural-looking precision.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Consultation Required</span>
-                                <a href="#" aria-label="Learn more about Botox & Fillers" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-face-smile text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Skin Rejuvenation</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Advanced bio-remodeling treatments (like Profhilo) to improve skin laxity, hydration, and overall tissue quality.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹15,000</span>
-                                <a href="#" aria-label="Learn more about Skin Rejuvenation" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-hourglass-half text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Anti-Aging Lasers</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Non-ablative laser therapies designed to stimulate collagen production and improve skin texture without significant downtime.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹8,000</span>
-                                <a href="#" aria-label="Learn more about Anti-Aging Lasers" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="group border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 focus-ring" tabindex="0">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-bolt text-xl"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Laser Hair Removal</h3>
-                            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">State-of-the-art diode laser technology for safe, effective, and virtually painless long-term hair reduction.</p>
-                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
-                                <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹2,000</span>
-                                <a href="#" aria-label="Learn more about Laser Hair Removal" class="text-primary hover:text-primaryHover interactive-link"><i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <!-- Card 1 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-droplet text-xl"></i>
             </div>
-        </section>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Acne Management</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive medical approach to clear active breakouts and prevent future occurrences through targeted therapies.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹2,500</span>
+            <a href="./service-details.html" aria-label="Learn more about Acne Management" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-sun text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Pigmentation Correction</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Advanced laser and topical treatments to address melasma, sun spots, and uneven skin tone for a luminous complexion.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹4,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Pigmentation Correction" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-leaf text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Chemical Peels</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Customized medical-grade exfoliations to reveal fresher, smoother skin and address fine lines and dullness.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹3,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Chemical Peels" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-gem text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Skin Brightening</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Intravenous therapies and advanced facials designed to boost hydration and impart a natural, healthy glow.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹5,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Skin Brightening" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Scar & Acne Marks</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Fractional lasers and micro-needling protocols to significantly reduce the appearance of textural irregularities and scars.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹6,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Scar & Acne Marks" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Hair Treatments -->
+    <div class="mb-24" id="category-hair">
+      <div class="mb-12 border-b border-primary/20 pb-4">
+        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Hair Treatments</h2>
+        <p class="text-textMuted mt-2 font-normal">Restorative solutions for hair and scalp vitality.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-person text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Hair Loss Therapy</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Comprehensive diagnostic evaluation and medical management for various forms of alopecia and thinning.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Consultation Required</span>
+            <a href="./service-details.html" aria-label="Learn more about Hair Loss Therapy" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-vial text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">PRP Therapy</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Platelet-Rich Plasma treatments utilizing your body's own growth factors to stimulate dormant hair follicles.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹7,500</span>
+            <a href="./service-details.html" aria-label="Learn more about PRP Therapy" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-brain text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Scalp Rejuvenation</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Deep cleansing and nourishing protocols to address dandruff, sensitivity, and create an optimal environment for growth.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹3,500</span>
+            <a href="./service-details.html" aria-label="Learn more about Scalp Rejuvenation" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Aesthetic Treatments -->
+    <div class="mb-12" id="category-aesthetic">
+      <div class="mb-12 border-b border-primary/20 pb-4">
+        <h2 class="font-heading text-4xl font-bold text-textDark uppercase tracking-tight">Aesthetic Treatment</h2>
+        <p class="text-textMuted mt-2 font-normal">Refined enhancements for timeless elegance.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-syringe text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Botox & Fillers</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Expertly administered injectables to smooth dynamic wrinkles and restore lost facial volume with natural-looking precision.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Consultation Required</span>
+            <a href="./service-details.html" aria-label="Learn more about Botox & Fillers" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-face-smile text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Skin Rejuvenation</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Advanced bio-remodeling treatments (like Profhilo) to improve skin laxity, hydration, and overall tissue quality.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹15,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Skin Rejuvenation" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-hourglass-half text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Anti-Aging Lasers</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">Non-ablative laser therapies designed to stimulate collagen production and improve skin texture without significant downtime.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹8,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Anti-Aging Lasers" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group flex flex-col border border-primary/20 rounded-medium p-8 bg-white/50 backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300" tabindex="0">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-bolt text-xl"></i>
+            </div>
+            <h3 class="font-heading text-2xl font-bold mb-3 text-textDark uppercase tracking-tight">Laser Hair Removal</h3>
+            <p class="text-textMuted text-sm mb-6 leading-relaxed font-normal">State-of-the-art diode laser technology for safe, effective, and virtually painless long-term hair reduction.</p>
+          </div>
+          <div class="flex items-center justify-between mt-auto pt-4 border-t border-primary/10">
+            <span class="text-sm font-bold text-textDark tracking-wider">Starting at ₹2,000</span>
+            <a href="./service-details.html" aria-label="Learn more about Laser Hair Removal" class="text-primary hover:text-primaryHover"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
         <!-- Benefits Section -->
         <section id="benefits" class="py-24 bg-bgMain">
@@ -1057,11 +1066,12 @@
         </section>
 
         <!-- CTA Section -->
-        <section
+       
+      <section
         class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20 stagger-enter"
       >
         <div
-          class="bg-textDark text-white rounded-[32px] overflow-hidden relative"
+          class="bg-textDark text-white md:rounded-[32px] overflow-hidden relative"
         >
           <div class="absolute inset-0 opacity-20">
             <img
@@ -1092,7 +1102,7 @@
               Resurfacing is the right protocol for your unique skin goals.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-wrap justify-center sm:flex-row gap-4">
               <button class="primary-btn btn-variant-two">
                 <span class="btn-fill"></span>
                 <span class="btn-logo">
@@ -1169,11 +1179,11 @@
               Explore
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
                 <a
                   href="./index.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Home
                 </a>
@@ -1181,7 +1191,7 @@
               <li>
                 <a
                   href="./about-us.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   About
                 </a>
@@ -1189,7 +1199,7 @@
               <li>
                 <a
                   href="./service.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Services
                 </a>
@@ -1197,7 +1207,7 @@
               <li>
                 <a
                   href="./gallery.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Gallery
                 </a>
@@ -1205,7 +1215,7 @@
               <li>
                 <a
                   href="./before-after.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Before & After
                 </a>
@@ -1213,7 +1223,7 @@
               <li>
                 <a
                   href="./blogs.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Blog
                 </a>
@@ -1221,7 +1231,7 @@
               <li>
                 <a
                   href="./contact.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Contact
                 </a>
@@ -1236,24 +1246,36 @@
               Treatments
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Skin Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Hair Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Laser Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Aesthetic Treatments
                 </a>
               </li>
@@ -1269,18 +1291,20 @@
             <ul class="space-y-4 text-sm text-textMuted">
               <li class="flex items-start gap-3">
                 <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
-                <span
-                  >123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai
-                  400703</span
+                <a 
+                  href="https://maps.google.com/?q=123+Luxury+Avenue+Sector+17+Vashi+Navi+Mumbai+400703"
+                  target="_blank"
                 >
+                  123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai 400703
+                </a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-phone text-primary"></i>
-                <span>+91 8928862682</span>
+                <a class="hover-anchor" href="tel:+918928862682">+91 8928862682</a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-envelope text-primary"></i>
-                <span>hello@skinique.com</span>
+                <a class="hover-anchor" href="mailto:hello@skinique.com">hello@skinique.com</a>
               </li>
             </ul>
           </div>
@@ -1298,17 +1322,17 @@
       <div class="flex items-center gap-6">
         <a
           href="./privacy-policy.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Privacy Policy</a
         >
         <a
           href="./terms-condition.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Terms & Conditions</a
         >
         <a
           href="#"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Sitemap</a
         >
       </div>

@@ -467,7 +467,7 @@
       <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
         <a
           href="./index.html"
-          class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 py-1 interactive-link focus-ring"
+          class="text-lg font-heading font-bold text-textMuted  pl-4 py-1 interactive-link focus-ring"
           >Home</a
         >
         <a
@@ -711,8 +711,8 @@
           >Contact</a
         >
 
-        <div class="mt-8 pt-8 border-t border-primary/10">
-          <a class="primary-btn w-full justify-center">
+        <div class="mt-8 border-t border-primary/10">
+          <a class="primary-btn  justify-center">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -731,33 +731,44 @@
    
     <main class="flex-grow w-full pt-[128px]">
 
-        <!-- ===================== HERO (Privacy Policy style) ===================== -->
-        <section class="w-full border-b border-skiniqueBorder bg-bgMain">
-            <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-24 max-w-3xl">
-                <span class="font-sans text-xs uppercase tracking-widest text-textMuted mb-6 block">Legal Documentation</span>
-                <h1 class="font-heading text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-textDark mb-6">
-                    Terms &amp; Conditions
-                </h1>
-                <p class="font-sans text-lg text-textMuted leading-relaxed max-w-2xl mb-8">
-                    By accessing our website or using our services, you agree to be bound by these Terms &amp; Conditions. Please read them carefully before proceeding.
-                </p>
-                <!-- Meta strip (version / date / compare) -->
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-textMuted">
-                    <div class="flex items-center gap-2">
-                        <i class="fa-regular fa-calendar text-primary"></i>
-                        <span><strong class="text-textDark">Effective Date:</strong> November 1, 2023</span>
-                    </div>
-                   
-                </div>
-            </div>
-        </section>
 
-        <!-- ===================== SPLIT LAYOUT ===================== -->
-        <section class="w-full bg-bgMain flex flex-col lg:flex-row relative max-w-[1440px] mx-auto">
+      <section id="contact-hero" class="py-32 border-b border-skiniqueBorder bg-bgMain">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="w-full">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-primary/30 rounded-full bg-bgMain/80 backdrop-blur-md shadow-sm"
+            >
+              <span
+                class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
+              ></span>
+              <span
+                class="text-xs font-bold tracking-widest uppercase text-textDark"
+                >Legal Documentation</span
+              >
+            </div>
+
+            <h1
+               class="font-heading text-[8.5vw] sm:text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase "
+            >
+              Terms &amp; Conditions
+              
+            </h1>
+
+            <p
+              class="text-xl text-textMuted leading-relaxed max-w-2xl font-normal"
+            >
+               By accessing our website or using our services, you agree to be bound by these Terms &amp; Conditions. Please read them carefully before proceeding.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+        <section class="w-full bg-bgMain flex flex-col lg:flex-row relative max-w-7xl mx-auto">
 
             <!-- Sidebar TOC (Privacy Policy sidebar style) -->
             <aside class="w-full lg:w-1/4 border-b lg:border-b-0 lg:border-r border-skiniqueBorder bg-bgMain lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] overflow-y-auto">
-                <div class="p-8 lg:p-12">
+                <div class="py-8 px-6 lg:py-12 lg:px-6">
                     <h3 class="font-sans text-xs uppercase tracking-widest text-textMuted font-semibold mb-6">Sections</h3>
                     <nav id="toc-nav" class="flex flex-col relative toc-container text-sm border-l-2 border-skiniqueBorder/50">
                         <div class="toc-highlight-border rounded-full" id="toc-highlight"></div>
@@ -922,11 +933,12 @@
         </section>
 
         <!-- CTA Section -->
-       <section
+       
+      <section
         class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20 stagger-enter"
       >
         <div
-          class="bg-textDark text-white rounded-[32px] overflow-hidden relative"
+          class="bg-textDark text-white md:rounded-[32px] overflow-hidden relative"
         >
           <div class="absolute inset-0 opacity-20">
             <img
@@ -957,7 +969,7 @@
               Resurfacing is the right protocol for your unique skin goals.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-wrap justify-center sm:flex-row gap-4">
               <button class="primary-btn btn-variant-two">
                 <span class="btn-fill"></span>
                 <span class="btn-logo">
@@ -1017,7 +1029,7 @@
         </div>
     </div>
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer id="footer" class="bg-bgMain py-10 border-t border-primary/20">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
@@ -1065,11 +1077,11 @@
               Explore
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
                 <a
                   href="./index.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Home
                 </a>
@@ -1077,7 +1089,7 @@
               <li>
                 <a
                   href="./about-us.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   About
                 </a>
@@ -1085,7 +1097,7 @@
               <li>
                 <a
                   href="./service.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Services
                 </a>
@@ -1093,7 +1105,7 @@
               <li>
                 <a
                   href="./gallery.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Gallery
                 </a>
@@ -1101,7 +1113,7 @@
               <li>
                 <a
                   href="./before-after.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Before & After
                 </a>
@@ -1109,7 +1121,7 @@
               <li>
                 <a
                   href="./blogs.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Blog
                 </a>
@@ -1117,7 +1129,7 @@
               <li>
                 <a
                   href="./contact.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Contact
                 </a>
@@ -1132,24 +1144,36 @@
               Treatments
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Skin Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Hair Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Laser Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Aesthetic Treatments
                 </a>
               </li>
@@ -1165,18 +1189,20 @@
             <ul class="space-y-4 text-sm text-textMuted">
               <li class="flex items-start gap-3">
                 <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
-                <span
-                  >123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai
-                  400703</span
+                <a 
+                  href="https://maps.google.com/?q=123+Luxury+Avenue+Sector+17+Vashi+Navi+Mumbai+400703"
+                  target="_blank"
                 >
+                  123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai 400703
+                </a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-phone text-primary"></i>
-                <span>+91 8928862682</span>
+                <a class="hover-anchor" href="tel:+918928862682">+91 8928862682</a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-envelope text-primary"></i>
-                <span>hello@skinique.com</span>
+                <a class="hover-anchor" href="mailto:hello@skinique.com">hello@skinique.com</a>
               </li>
             </ul>
           </div>
@@ -1194,17 +1220,17 @@
       <div class="flex items-center gap-6">
         <a
           href="./privacy-policy.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Privacy Policy</a
         >
         <a
           href="./terms-condition.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Terms & Conditions</a
         >
         <a
           href="#"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Sitemap</a
         >
       </div>

@@ -14,11 +14,37 @@
     bottom:0% !important;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     left:0;
-    border-bottom: 2px solid #000;
+    border-bottom: 1.5px solid #c8b27c;
 }
 
 
 
 .hover-anchor > li > a:hover::before {
+  width: 100%;
+}
+
+
+
+
+.hover-anchor{
+    position: relative;
+    padding-bottom: 4px;
+    /* font-weight: 500; */
+}
+
+
+.hover-anchor::before{
+    content:"";
+    position: absolute;
+    width:0%;
+    bottom:0% !important;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    left:0;
+    border-bottom: 1.5px solid #c8b27c;
+}
+
+
+
+.hover-anchor:hover::before {
   width: 100%;
 }

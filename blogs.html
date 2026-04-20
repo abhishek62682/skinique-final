@@ -116,16 +116,7 @@
 </head>
 
 <body class="h-full text-textDark">
-   <!-- Mobile Sticky FAB -->
-    <div class="md:hidden fixed bottom-6 right-6 z-[70]">
-      <a
-        href="#booking"
-        aria-label="Book Consultation"
-        class="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_30px_rgba(201,178,124,0.4)] focus:outline-none"
-      >
-        <i class="fa-regular fa-calendar-check text-xl"></i>
-      </a>
-    </div>
+   
 
     <div
       id="nav-wrapper"
@@ -483,7 +474,7 @@
       <nav class="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
         <a
           href="./index.html"
-          class="text-lg font-heading font-bold text-textDark border-l-4 border-primary pl-4 py-1 interactive-link focus-ring"
+          class="text-lg font-heading font-bold text-textMuted  pl-4 py-1 interactive-link focus-ring"
           >Home</a
         >
         <a
@@ -728,7 +719,7 @@
         >
 
         <div class="mt-8 pt-8 border-t border-primary/10">
-          <a class="primary-btn w-full justify-center">
+          <a class="primary-btn  justify-center">
             <span class="btn-fill"></span>
             <span class="btn-logo">
               <img
@@ -761,7 +752,7 @@
       </div>
 
       <h1
-        class="font-heading text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase tracking-tight"
+         class="font-heading text-[8.5vw] sm:text-6xl md:text-7xl font-bold leading-[1.1] mb-8 text-textDark uppercase "
       >
         Skinique <br />
         Journal
@@ -959,7 +950,7 @@
         class="py-32 w-full max-w-6xl mx-auto border-t border-textMuted/20 stagger-enter"
       >
         <div
-          class="bg-textDark text-white rounded-[32px] overflow-hidden relative"
+          class="bg-textDark text-white md:rounded-[32px] overflow-hidden relative"
         >
           <div class="absolute inset-0 opacity-20">
             <img
@@ -990,7 +981,7 @@
               Resurfacing is the right protocol for your unique skin goals.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-wrap justify-center sm:flex-row gap-4">
               <button class="primary-btn btn-variant-two">
                 <span class="btn-fill"></span>
                 <span class="btn-logo">
@@ -1066,11 +1057,11 @@
               Explore
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
                 <a
                   href="./index.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Home
                 </a>
@@ -1078,7 +1069,7 @@
               <li>
                 <a
                   href="./about-us.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   About
                 </a>
@@ -1086,7 +1077,7 @@
               <li>
                 <a
                   href="./service.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Services
                 </a>
@@ -1094,7 +1085,7 @@
               <li>
                 <a
                   href="./gallery.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Gallery
                 </a>
@@ -1102,7 +1093,7 @@
               <li>
                 <a
                   href="./before-after.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Before & After
                 </a>
@@ -1110,7 +1101,7 @@
               <li>
                 <a
                   href="./blogs.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Blog
                 </a>
@@ -1118,7 +1109,7 @@
               <li>
                 <a
                   href="./contact.html"
-                  class="hover:text-textDark transition-colors"
+                  class="hover:text-textDark hover-anchor transition-colors"
                 >
                   Contact
                 </a>
@@ -1133,24 +1124,36 @@
               Treatments
             </h4>
 
-            <ul class="space-y-4 text-sm hover-anchor text-textMuted">
+            <ul class="space-y-4 text-sm text-textMuted">
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Skin Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Hair Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Laser Treatments
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:text-textDark transition-colors">
+                <a
+                  href="#"
+                  class="hover:text-textDark hover-anchor transition-colors"
+                >
                   Aesthetic Treatments
                 </a>
               </li>
@@ -1166,18 +1169,20 @@
             <ul class="space-y-4 text-sm text-textMuted">
               <li class="flex items-start gap-3">
                 <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
-                <span
-                  >123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai
-                  400703</span
+                <a 
+                  href="https://maps.google.com/?q=123+Luxury+Avenue+Sector+17+Vashi+Navi+Mumbai+400703"
+                  target="_blank"
                 >
+                  123 Luxury Avenue, Sector 17,<br />Vashi, Navi Mumbai 400703
+                </a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-phone text-primary"></i>
-                <span>+91 8928862682</span>
+                <a class="hover-anchor" href="tel:+918928862682">+91 8928862682</a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fa-solid fa-envelope text-primary"></i>
-                <span>hello@skinique.com</span>
+                <a class="hover-anchor" href="mailto:hello@skinique.com">hello@skinique.com</a>
               </li>
             </ul>
           </div>
@@ -1195,17 +1200,17 @@
       <div class="flex items-center gap-6">
         <a
           href="./privacy-policy.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Privacy Policy</a
         >
         <a
           href="./terms-condition.html"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Terms & Conditions</a
         >
         <a
           href="#"
-          class="text-xs text-skinique-textLight hover:text-skinique-accent transition-colors"
+          class="text-xs hover-anchor text-skinique-textLight hover:text-skinique-accent transition-colors"
           >Sitemap</a
         >
       </div>
